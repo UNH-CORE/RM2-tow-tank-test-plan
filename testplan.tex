@@ -18,7 +18,7 @@
 	\item Acquire a Reynolds number independent dataset for the DOE RM2 cross-flow
 	turbine.
 
-		\begin{itemize}
+		\begin{enumerate}
 			\item Design and build an appropriate turbine model.
 		
 			\item Acquire full device performance curves at multiple $Re$, to attempt to
@@ -29,8 +29,20 @@
 		
 			\item If possible, acquire a detailed wake flow map in the near-wake at
 			$Re_0$ using acoustic Doppler velocimetry.
-		\end{itemize}
-
+		\end{enumerate}
+	
+	\item Measure the effects of strut drag on RM2 performance.
+	
+	\begin{enumerate}
+		\item Measure the parasitic torque from support struts by rotating the turbine
+		in still water. \label{obj-parasitic_torque}
+		
+		\item Redo task \ref{obj-parasitic_torque} with cylindrical tubes slid over
+		the struts to significantly increase drag.
+		
+		\item Acquire a performance curve at $Re_0$ with the high-drag struts. 
+	\end{enumerate}
+	
 \end{enumerate}
 
 
@@ -42,27 +54,26 @@ The turbine is to be a 1:6 scale model of the DOE RM2 rotor.
 
 Turbine geometry is to be scaled from the RM2 design report \cite{Barone2011}.
 
-\begin{itemize}
-	\item Blade profile (as a function of height as well) = NACA 0021
-	\item
-	  {Blade chord at $z=0$ = }
-	\item
-	  {Blade chord at $z = H/2$ = }
-	\item
-	  {Blade height = }
-	\item
-	  {Turbine diameter = }
-	\item
-	  {Blade mounting point = $0.5c$?}
-	\item
-	  {Blade pitch = 0 degrees?}
-	\item
-	  {Shaft diameter = No spec?}
-	\item
-	  {Strut profile = NACA 0021?}
-	\item
-	  {Strut chord = }
-\end{itemize}
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l|}
+   & Full-scale & Model (1:6) \\
+\hline 
+Diameter (m)   & 6.45 & 1.075 \\ 
+Height (m)     & 4.84 & 0.807 \\ 
+Blade root chord (m) & 0.400 & 0.067 \\ 
+Blade tip chord (m)  & 0.240 & 0.040 \\ 
+Blade profile & NACA 0021 & NACA 0021 \\ 
+Blade mount & 1/2 chord & 1/2 chord \\ 
+Blade pitch (deg.) & 0.0 & 0.0 \\ 
+Strut profile & NACA 0021 & NACA 0021 \\ 
+Strut chord (m) & 0.360 & 0.060 \\ 
+Shaft diameter (m) &  &  \\ 
+\end{tabular}
+\caption{RM2 turbine geometric parameters.}
+\end{table}
+
+The shaft diameter has still not been chosen.
 
 \bibliography{../../../../../Library/Library}
 \bibliographystyle{plain}
