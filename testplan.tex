@@ -111,15 +111,22 @@ resolution.
 A full performance curve for the turbine will consist of 20--30 tows at varying
 tip speed ratio. Each of these tows will produce raw data for the turbine
 torque, drag force on the submerged equipment, turbine shaft angle, carriage
-speed, and Vectrino velocity measurements.
+speed, and Vectrino velocity measurements. Raw data files will be saved from our
+data acquisition device at a sample sate of 2 kHz, from the motion controller at
+1 kHz, and from the Vectrino at 200 Hz. All three devices will be triggered by
+the motion controller at the beginning of each run so that they are relatively
+synchronized.
 
-Tare torque and drag runs will also be performed.
+Tare torque and drag runs will also be performed to measure the shaft bearing
+friction torque and turbine mounting frame drag, respectively. These data will
+be similar to the turbine performance data, omitting torque measurements for the
+tare drag runs and vice versa.
 
 Raw and processed data, along with the processing and plotting code, will be
-uploaded to both figshare (http://figshare.com) and GitHub (http://github.com).
-Figshare provides a digital object identifier (DOI) for each dataset, while
-GitHub provides a mechanism for updating the code and processed data, both by
-the investigators and third parties.
+hosted on both figshare and GitHub. Figshare provides a digital object
+identifier (DOI) and persistent URL for each dataset, while GitHub provides a
+mechanism for updating the code and processed data, both by the investigators
+and third parties.
 
 
 \bibliography{../../../../../Library/Library}
