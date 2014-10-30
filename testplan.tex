@@ -122,12 +122,16 @@ friction torque and turbine mounting frame drag, respectively. These data will
 be similar to the turbine performance data, omitting torque measurements for the
 tare drag runs and vice versa.
 
-Raw and processed data, along with the processing and plotting code, will be
-hosted on both figshare and GitHub. Figshare provides a digital object
-identifier (DOI) and persistent URL for each dataset, while GitHub provides a
-mechanism for updating the code and processed data, both by the investigators
-and third parties. Raw data will be in HDF5 format, processed data in comma
-separated value (CSV), and processing code in Python.
+Raw data will be in HDF5 format, processed data in comma separated value (CSV),
+and processing code in Python. Raw data files will be uploaded to figshare,
+which will then give the dataset a Digital Object Identifier (DOI) and therefore
+a persistent URL. Processed data and processing code will be hosted on GitHub to
+help facilitate updates to the analysis by both the investigators and third
+parties. This processing code will be written such that raw data is downloaded
+automatically as needed. Versions  or ``releases'' of the Git repository will be
+uploaded to figshare such that they will have their own DOI, and can be cited in
+publications appropriately. A report detailing the experiment and the results
+will be written and included as part of the repository.
 
 \bibliography{../../../../../Library/Library}
 \bibliographystyle{plain}
