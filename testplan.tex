@@ -40,7 +40,51 @@
 
 \chapter{Introduction}
 
-\todo[inline]{Write an introduction...}
+The turbine blades of cross-flow turbines experience a large range of angles of
+attack as they rotate around the turbine axis of rotation (``cross-flow
+turbine'' means the axis of rotation is perpendicular to flow direction---can be
+vertical or horizontal).  This range of angles of attack becomes larger as the
+tip speed ratio $\lambda=\omega R/U_\infty$  decreases.  The range of angles of
+attack is typically sufficiently large that the blades operate under dynamic
+stall, which is a Reynolds number dependent phenomenon. Furthermore, the higher
+the solidity of a cross-flow turbine, the lower a tip-speed ratio it will
+operate at. Marine Hydrokinetic (MHK) cross-flow turbines typically have higher
+solidity than cross-flow wind turbines (VAWT), and hence operate at lower
+tip-speed ratios. Since MHK turbines operate in a higher density fluid, unsteady
+dynamic effects related to the blades? pitching motion and flow curvature also
+become more important.
+
+The performance of cross-flow MHK turbines thus depends on both Reynolds number
+and solidity (note that these issues are related, since an average blade chord
+Reynolds number, $Re_{c,\mathrm{avg}}?\lambda U_\infty c/ \nu$, can be expressed
+in terms of tip speed ratio, which is a function of solidity). If numerical
+models are validated with physical model data that was obtained at too low
+Reynolds numbers, it cannot be determined whether problems with model
+predictions are caused by Reynolds number effects, issues related to higher
+solidity, or both.  It is uncertain whether numerical models validated with
+physical model data obtained at low Reynolds number should be considered
+validated at all, since the scale at which the model will be applied is orders
+of magnitude larger. One way to overcome this uncertainty is to show that the
+scaled physical model test has become Reynolds number independent, and therefore
+validation efforts should be relevant at full-scale.
+
+For example, the effects of Reynolds number on average power output was shown to
+be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
+testing (Blackwell et al., 1976): Maximum power coefficient,
+$C_{P,\mathrm{max}}$, increased with Reynolds number, $Re_c$, along with a shift
+of the location of $C_{P,\mathrm{max}}$ toward lower tip speed ratios due to
+delayed blade stall. The effects of Reynolds number were quite dramatic over a
+relatively small range of $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$.
+
+To date, attempts to validate the CACTUS model have relied on measurements from
+SAFL and UNH.  For the SAFL experiments (RM2), the chord Reynolds number,
+$Re_c?\sim 10^4$, was below the threshold needed to properly simulate lift and
+stall characteristics.  For the UNH experiment (UNH-RVAT, Bachant and Wosnik,
+2013), the chord Reynolds number was sufficiently high at $Re_c \approx 2.7
+\time 0^5$, but the chord/radius ratio and solidity (13.4\%) created instability
+in the free-wake evolution, which caused significant overestimation of power
+coefficient.
+
 
 \section{Objectives}
 
