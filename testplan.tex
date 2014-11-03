@@ -1,5 +1,4 @@
-%\documentclass[pdf,12pt,report,strict]{SANDreport}
-\documentclass{article}
+\documentclass{report}
 \usepackage{subfigure}
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
@@ -8,23 +7,42 @@
 \usepackage{graphicx}
 \usepackage{todonotes}
 
-\author{P. Bachant, M. Wosnik, V. Neary}
+\author{P. Bachant, M. Wosnik, B. Gunawan, V. Neary}
 \title{Test Plan: UNH RM2 Tow Tank Experiment}
-
-%\SANDnum{NUMBER}		% e.g. \SANDnum{SAND2006-0420}
-%\SANDprintDate{DATE}	% Month, year
-%\SANDauthor{AUTHORS}	% One line, separated by commas
 
 \begin{document}
 
-\maketitle
-%\tableofcontents
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\Large
+        RM2 Tow Tank Experimental Test Plan\\
+    }  
+            \vskip2cm
+            P. Bachant$^1$\\
+            M. Wosnik$^1$\\
+            B. Gunawan$^2$\\
+            V. Neary$^2$\\  
+    \vfill
+    November 7, 2014
+    \vfill
+    \includegraphics[width=0.33\textwidth]{figures/unhlogo} \\
+    \vspace{0.1in}
+    \includegraphics[width=0.42\textwidth]{figures/snllogo} \\
+    \vspace{0.1in}
+    \includegraphics[width=0.35\textwidth]{figures/doelogo}
+    \vfill
+    \vfill
+\end{titlepage}
 
-\section{Introduction}
+\tableofcontents
+\listoffigures
+
+\chapter{Introduction}
 
 \todo[inline]{Write an introduction...}
 
-\subsection{Objectives}
+\section{Objectives}
 
 \begin{enumerate}
 
@@ -59,13 +77,13 @@
 \end{enumerate}
 
 
-\section{Experimental setup and methods}
+\chapter{Experimental setup and methods}
 
-\subsection{Turbine model}
+\section{Turbine model}
 
 The turbine is to be a 1:6 scale model of the DOE RM2 rotor.
 
-\subsubsection{Geometric requirements}
+\subsection{Geometric requirements}
 
 Turbine geometry is to be scaled from the RM2 design report \cite{Barone2011}.
 
@@ -91,7 +109,7 @@ Shaft diameter (m) &  &  \\
 The shaft diameter has still not been chosen.
 
 
-\subsection{Facility and instrumentation}
+\section{Facility and instrumentation}
 
 Experiments will be performed in the UNH tow/wave tank. The turbine will be
 mounted in a frame built from NACA 0020 struts, attached to the tow carriage by
@@ -106,7 +124,7 @@ inflow velocity will be measured using a linear encoder with 10 $\mu$m
 resolution.
 
 
-\section{Research deliverables}
+\chapter{Research deliverables}
 
 A full performance curve for the turbine will consist of 20--30 tows at varying
 tip speed ratio. Each of these tows will produce raw data for the turbine
