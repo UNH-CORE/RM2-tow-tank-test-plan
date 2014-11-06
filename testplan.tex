@@ -19,7 +19,8 @@
     \centering
     \vfill
     {\bfseries\Large
-        RM2 Tow Tank Experimental Test Plan\\
+        Experimental Test Plan: Reference Model 2 Testing in the University
+        of New Hampshire Tow Tank\\
     }  
             \vskip2cm
             P. Bachant$^1$\\
@@ -169,10 +170,9 @@ Shaft diameter (m) & 0.254 \cite{Beam2011} or 0.416 \cite{Hill2014} & 0.0635\\
 \label{tab-turb_geom}
 \end{table}
 
-
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=0.6\textwidth]{Figures/turbine}
+\includegraphics[width=0.4\textwidth]{Figures/turbine}
 \caption{A drawing of the UNH RM2 scaled physical model.}
 \label{fig-turbine_drawing}
 \end{figure}
@@ -195,10 +195,9 @@ Turbine wake measurements at 1 turbine diameter downstream will be measured with
 a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A drawing
 of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
 
-
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{Figures/tank_cross_section}
+\includegraphics[width=0.9\textwidth]{Figures/tank_cross_section}
 \caption{A drawing of the experimental setup.}
 \label{fig-exp_setup}
 \end{figure}
@@ -220,12 +219,13 @@ friction torque and turbine mounting frame drag, respectively. These data will
 be similar to the turbine performance data, omitting torque measurements for the
 tare drag runs and vice versa.
 
-Raw data will be in HDF5 format, processed data in comma separated value (CSV),
-and processing code in Python. Raw data files will be uploaded to figshare,
-which will then give the dataset a Digital Object Identifier (DOI) and therefore
-a persistent URL. Processed data and processing code will be hosted on GitHub to
-help facilitate updates to the analysis by both the investigators and third
-parties. This processing code will be written such that raw data is downloaded
+Raw data will be in HDF5 format, run metadata in text-based JavaScript Object
+Notation (JSON), processed data in comma separated value (CSV), and processing
+code in Python. Raw data files will be uploaded to figshare, which will then
+give the dataset a Digital Object Identifier (DOI) and therefore a persistent
+URL. Processed data and processing code will be hosted on GitHub to help
+facilitate updates to the analysis by both the investigators and third parties.
+This processing code will be written such that raw data is downloaded
 automatically as needed. Versions  or ``releases'' of the Git repository will be
 uploaded to figshare such that they will have their own DOI, and can be cited in
 publications appropriately. A report detailing the experiment and the results
