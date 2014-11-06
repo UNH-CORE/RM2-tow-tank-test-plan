@@ -19,8 +19,7 @@
     \centering
     \vfill
     {\bfseries\Large
-        Experimental Test Plan: Reference Model 2 Testing in the University
-        of New Hampshire Tow Tank\\
+        Experimental Test Plan: 1:6 Scale Reference Model 2 Cross-Flow Turbine\\
     }  
             \vskip2cm
             P. Bachant$^1$\\
@@ -43,25 +42,26 @@
     \includegraphics[width=0.42\textwidth]{Figures/snllogo} \\
     \vspace{0.1in}
     \includegraphics[width=0.35\textwidth]{Figures/doelogo}
+    \vfill
 \end{titlepage}
 
 \tableofcontents
 
 \chapter{Introduction}
 
-The turbine blades of cross-flow turbines experience a large range of angles of
-attack as they rotate around the turbine axis of rotation (``cross-flow
-turbine'' means the axis of rotation is perpendicular to flow direction---can be
-vertical or horizontal).  This range of angles of attack becomes larger as the
-tip speed ratio $\lambda=\omega R/U_\infty$  decreases.  The range of angles of
-attack is typically sufficiently large that the blades operate under dynamic
-stall, which is a Reynolds number dependent phenomenon. Furthermore, the higher
-the solidity of a cross-flow turbine, the lower a tip-speed ratio it will
-operate at. Marine Hydrokinetic (MHK) cross-flow turbines typically have higher
-solidity than cross-flow wind turbines (VAWT), and hence operate at lower
-tip-speed ratios. Since MHK turbines operate in a higher density fluid, unsteady
-dynamic effects related to the blades pitching motion and flow curvature also
-become more important.
+The blades of cross-flow turbines experience large variations in angles of
+attack as they rotate about their axis (``cross-flow turbine'' means the axis of
+rotation is perpendicular to flow direction---can be vertical or horizontal).
+This range of angles of attack becomes larger as the tip speed ratio
+$\lambda=\omega R/U_\infty$  decreases.  The variation is typically sufficiently
+large that the blades operate under dynamic stall, which is a complex unsteady
+process, deviating significantly from static foil behavior. Furthermore, the
+higher the solidity of a cross-flow turbine, the lower the optimal tip-speed
+ratio at which it operates. Marine Hydrokinetic (MHK) cross-flow turbines
+typically have higher solidity than cross-flow wind turbines (VAWT), and hence
+operate at lower tip-speed ratios. Since MHK turbines operate in a higher
+density fluid, unsteady dynamic effects related to the blades pitching motion
+and flow curvature also become more important when compared to wind turbines.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
@@ -172,8 +172,8 @@ Shaft diameter (m) & 0.254 \cite{Beam2011} or 0.416 \cite{Hill2014} & 0.0635\\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.4\textwidth]{Figures/turbine}
-\caption{A drawing of the UNH RM2 scaled physical model.}
+\includegraphics[width=0.5\textwidth]{Figures/turbine}
+\caption{Illustration of the UNH RM2 scaled physical model.}
 \label{fig-turbine_drawing}
 \end{figure}
 
@@ -197,8 +197,8 @@ of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.9\textwidth]{Figures/tank_cross_section}
-\caption{A drawing of the experimental setup.}
+\includegraphics[clip,trim=0.1in 0 0 0, width=0.9\textwidth]{Figures/tank_cross_section}
+\caption{Illustration of the experimental setup.}
 \label{fig-exp_setup}
 \end{figure}
 
