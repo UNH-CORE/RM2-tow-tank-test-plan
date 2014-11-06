@@ -53,15 +53,16 @@ The blades of cross-flow turbines experience large variations in angles of
 attack as they rotate about their axis (``cross-flow turbine'' means the axis of
 rotation is perpendicular to flow direction---can be vertical or horizontal).
 This range of angles of attack becomes larger as the tip speed ratio
-$\lambda=\omega R/U_\infty$ decreases. The variation is typically sufficiently
-large that the blades operate under dynamic stall, which is a complex unsteady
-process, deviating significantly from static foil behavior. Furthermore, the
-higher the solidity of a cross-flow turbine, the lower the optimal tip-speed
-ratio at which it operates. Marine Hydrokinetic (MHK) cross-flow turbines
-typically have higher solidity than cross-flow wind turbines (VAWT), and hence
-operate at lower tip-speed ratios. Since MHK turbines operate in a higher
-density fluid, unsteady dynamic effects related to the blades pitching motion
-and flow curvature also become more important when compared to wind turbines.
+$\lambda=\omega R/U_\infty$ decreases \cite{Para2002}. The variation is
+typically sufficiently large that the blades operate under dynamic stall, which
+is a complex unsteady process, deviating significantly from static foil
+behavior. Furthermore, the higher the solidity of a cross-flow turbine, the
+lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
+(MHK) cross-flow turbines typically have higher solidity than cross-flow wind
+turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
+operate in a higher density fluid, unsteady dynamic effects related to the
+blades pitching motion and flow curvature also become more important when
+compared to wind turbines.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
@@ -101,7 +102,8 @@ significant overestimation of power coefficient.
 The present task is therefore to acquire a new dataset for the lower solidity
 RM2 turbine, but at higher Reynolds numbers. It is also suspected that the strut
 drag model in CACTUS may be causing some discrepancy, so providing some hard
-data for comparison will help sort out that question.
+data for comparison will help sort out that question. This dataset will be
+publicly available for both validation of CACTUS and other numerical models.
 
 \section{Objectives}
 
@@ -110,7 +112,7 @@ To summarize, the objectives for this study are:
 \begin{enumerate}
 
 	\item Acquire a Reynolds number independent dataset for the DOE RM2 cross-flow
-	turbine.
+	turbine. This task involves the following subtasks:
 
 		\begin{enumerate}
 			\item Design and build an appropriate turbine model.
@@ -125,7 +127,8 @@ To summarize, the objectives for this study are:
 			$Re_0$ using acoustic Doppler velocimetry.
 		\end{enumerate}
 	
-	\item Measure the effects of strut drag on RM2 performance.
+	\item Measure the effects of strut drag on RM2 performance. This objective will
+	require that we:
 	
 	\begin{enumerate}
 		\item Measure the parasitic torque from support struts by rotating the turbine
