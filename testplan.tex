@@ -8,6 +8,7 @@
 \usepackage{todonotes}
 \usepackage{appendix}
 \usepackage{pdfpages}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
 
 \author{P. Bachant, M. Wosnik, B. Gunawan, V. Neary}
 \title{Test Plan: UNH RM2 Tow Tank Experiment}
@@ -36,11 +37,11 @@
     \vfill
     November 7, 2014
     \vfill
-    \includegraphics[width=0.33\textwidth]{figures/unhlogo} \\
+    \includegraphics[width=0.33\textwidth]{Figures/unhlogo} \\
     \vspace{0.1in}
-    \includegraphics[width=0.42\textwidth]{figures/snllogo} \\
+    \includegraphics[width=0.42\textwidth]{Figures/snllogo} \\
     \vspace{0.1in}
-    \includegraphics[width=0.35\textwidth]{figures/doelogo}
+    \includegraphics[width=0.35\textwidth]{Figures/doelogo}
 \end{titlepage}
 
 \tableofcontents
@@ -58,7 +59,7 @@ the solidity of a cross-flow turbine, the lower a tip-speed ratio it will
 operate at. Marine Hydrokinetic (MHK) cross-flow turbines typically have higher
 solidity than cross-flow wind turbines (VAWT), and hence operate at lower
 tip-speed ratios. Since MHK turbines operate in a higher density fluid, unsteady
-dynamic effects related to the blades? pitching motion and flow curvature also
+dynamic effects related to the blades pitching motion and flow curvature also
 become more important.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
@@ -77,23 +78,29 @@ validation efforts should be relevant at full-scale.
 
 For example, the effects of Reynolds number on average power output was shown to
 be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
-testing (Blackwell et al., 1976): Maximum power coefficient,
+testing \cite{Blackwell1976}: Maximum power coefficient,
 $C_{P,\mathrm{max}}$, increased with Reynolds number, $Re_c$, along with a shift
 of the location of $C_{P,\mathrm{max}}$ toward lower tip speed ratios due to
 delayed blade stall. The effects of Reynolds number were quite dramatic over a
 relatively small range of $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$.
 
 To date, attempts to validate the CACTUS model have relied on measurements from
-SAFL and UNH.  For the SAFL experiments (RM2), the chord Reynolds number,
-$Re_c \sim 10^4$, was below the threshold needed to properly simulate lift and
-stall characteristics.  For the UNH experiment (UNH-RVAT, Bachant and Wosnik,
-2013), the chord Reynolds number was sufficiently high at $Re_c \approx 2.7
-\times 10^5$, but the chord/radius ratio and solidity (13.4\%) created instability
-in the free-wake evolution, which caused significant overestimation of power
-coefficient.
+SAFL and UNH \cite{Hill2014}. For the SAFL experiments (RM2), the chord Reynolds
+number, $Re_c \sim 10^4$, was below the threshold needed to properly simulate
+lift and stall characteristics.  For the UNH experiment \cite{Bachant2013}, the
+chord Reynolds number was sufficiently high at $Re_c \approx 2.7 \times 10^5$,
+but the chord/radius ratio and solidity (13.4\%) created instability in the
+free-wake evolution, which caused significant overestimation of power
+coefficient. 
 
+The present task is therefore to acquire a new dataset for the lower solidity
+RM2 turbine, but at higher Reynolds numbers. It is also suspected that the strut
+drag model in CACTUS may be causing some discrepancy, so providing some hard
+data for comparison will help sort out that question.
 
 \section{Objectives}
+
+To summarize, the objectives for this study are:
 
 \begin{enumerate}
 
@@ -132,11 +139,15 @@ coefficient.
 
 \section{Turbine model}
 
-The turbine is to be a 1:6 scale model of the DOE RM2 rotor.
-
-\subsection{Geometric requirements}
-
-Turbine geometry is to be scaled from the RM2 design report \cite{Barone2011}.
+The turbine is to be a 1:6 scale model of the DOE RM2 rotor, reproduced as
+faithfully as possible. Turbine geometry is to be scaled from the RM2 ``rev 0''
+design report \cite{Barone2011}, with the exception of the shaft diameter, which
+will be a scaled version of the SAFL RM2 shaft \cite{Hill2014}. The hub design
+is also similar to the SAFL model, which may aid in comparison of the results,
+though this is not a top priority. Geometric parameters are shown in
+Table~\ref{tab-turb_geom} and a drawing of the turbine design is shown in
+Figure~\ref{fig-turbine_drawing}. See Appendix~\ref{app-turbine_dwgs} for
+manufacturing drawings.
 
 \begin{table}[ht]
 \centering
@@ -152,27 +163,45 @@ Blade mount & 1/2 chord & 1/2 chord \\
 Blade pitch (deg.) & 0.0 & 0.0 \\ 
 Strut profile & NACA 0021 & NACA 0021 \\ 
 Strut chord (m) & 0.360 & 0.060 \\ 
-Shaft diameter (m) &  &  \\ 
+Shaft diameter (m) & 0.254 \cite{Beam2011} or 0.416 \cite{Hill2014} & 0.0635\\ 
 \end{tabular}
 \caption{RM2 turbine geometric parameters.}
+\label{tab-turb_geom}
 \end{table}
 
-The shaft diameter has still not been chosen.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Figures/turbine}
+\caption{A drawing of the UNH RM2 scaled physical model.}
+\label{fig-turbine_drawing}
+\end{figure}
 
 
 \section{Facility and instrumentation}
 
-Experiments will be performed in the UNH tow/wave tank. The turbine will be
-mounted in a frame built from NACA 0020 struts, attached to the tow carriage by
-four linear bearings, which transfer all streamwise force to a pair of S-beam
-load cells. The turbine shaft RPM will be controlled by a servo motor system,
-which allows prescription of the turbine tip speed ratio. The load torque will
-be measured by an inline rotary torque transducer and a load cell mounted at a
-fixed distance from the servo motor, providing a redundant measurement. Turbine
-shaft angle will be measured using the servo drive's emulated encoder output,
-set to $10^5$ counts per turbine shaft revolution. Carriage speed, and therefore
-inflow velocity will be measured using a linear encoder with 10 $\mu$m
-resolution.
+Experiments will be performed in the UNH tow/wave tank, a 30 m long facility
+with a 3.66 m wide by 2.44 m deep cross-section. The turbine will be mounted in
+a frame built from NACA 0020 struts, attached to the tow carriage by four linear
+bearings, which transfer all streamwise force to a pair of S-beam load cells.
+The turbine shaft RPM will be controlled by a servo motor system, which allows
+prescription of the turbine tip speed ratio. The load torque will be measured by
+an inline rotary torque transducer and a load cell mounted at a fixed distance
+from the servo motor, providing a redundant measurement. Turbine shaft angle
+will be measured using the servo drive's emulated encoder output, set to $10^5$
+counts per turbine shaft revolution. Carriage speed, and therefore inflow
+velocity will be measured using a linear encoder with 10 $\mu$m resolution.
+Turbine wake measurements at 1 turbine diameter downstream will be measured with
+a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A drawing
+of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Figures/tank_cross_section}
+\caption{A drawing of the experimental setup.}
+\label{fig-exp_setup}
+\end{figure}
 
 
 \chapter{Research deliverables}
@@ -209,6 +238,8 @@ will be written and included as part of the repository.
 \begin{appendices}
 
 \chapter{Turbine model manufacturing drawings}
+
+\label{app-turbine_dwgs}
 
 \includepdf[pages={1-3}, landscape]{../Drawings/Assembly-RM2-UNH.pdf}
 
