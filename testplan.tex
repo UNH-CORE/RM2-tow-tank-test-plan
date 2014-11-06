@@ -1,4 +1,4 @@
-\documentclass[12pt]{scrreprt}
+\documentclass[14pt,letterpaper]{scrreprt}
 \usepackage{subfigure}
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
@@ -219,13 +219,13 @@ friction torque and turbine mounting frame drag, respectively. These data will
 be similar to the turbine performance data, omitting torque measurements for the
 tare drag runs and vice versa.
 
-Raw data will be in HDF5 format, run metadata in text-based JavaScript Object
-Notation (JSON), processed data in comma separated value (CSV), and processing
-code in Python. Raw data files will be uploaded to figshare, which will then
-give the dataset a Digital Object Identifier (DOI) and therefore a persistent
-URL. Processed data and processing code will be hosted on GitHub to help
-facilitate updates to the analysis by both the investigators and third parties.
-This processing code will be written such that raw data is downloaded
+Raw data will be stored in HDF5 format, run metadata in text-based JavaScript
+Object Notation (JSON), processed data in comma separated value (CSV), and
+processing code in Python. Raw data files will be uploaded to figshare, which
+will then give the dataset a Digital Object Identifier (DOI) and therefore a
+persistent URL. Processed data and processing code will be hosted on GitHub to
+help facilitate updates to the analysis by both the investigators and third
+parties. This processing code will be written such that raw data is downloaded
 automatically as needed. Versions  or ``releases'' of the Git repository will be
 uploaded to figshare such that they will have their own DOI, and can be cited in
 publications appropriately. A report detailing the experiment and the results
@@ -242,6 +242,15 @@ will be written and included as part of the repository.
 \label{app-turbine_dwgs}
 
 \includepdf[pages={1-3}, landscape]{../Drawings/Assembly-RM2-UNH.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Blade.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Strut.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Shaft.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Hub-section.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Plug-shaft-locating.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Spacer-blade-mount.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Strut-cover.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/Insert-strut-cover.pdf}
+\includepdf[pages={1}, landscape]{../Drawings/End-cap-strut-cover.pdf}
 
 \end{appendices}
 
