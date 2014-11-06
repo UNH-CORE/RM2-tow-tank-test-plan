@@ -53,7 +53,7 @@ The blades of cross-flow turbines experience large variations in angles of
 attack as they rotate about their axis (``cross-flow turbine'' means the axis of
 rotation is perpendicular to flow direction---can be vertical or horizontal).
 This range of angles of attack becomes larger as the tip speed ratio
-$\lambda=\omega R/U_\infty$  decreases.  The variation is typically sufficiently
+$\lambda=\omega R/U_\infty$ decreases. The variation is typically sufficiently
 large that the blades operate under dynamic stall, which is a complex unsteady
 process, deviating significantly from static foil behavior. Furthermore, the
 higher the solidity of a cross-flow turbine, the lower the optimal tip-speed
@@ -67,32 +67,36 @@ The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
 Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
 expressed in terms of tip speed ratio, which is a function of solidity). If
-numerical models are validated with physical model data that was obtained at too
-low Reynolds numbers, it cannot be determined whether problems with model
-predictions are caused by Reynolds number effects, issues related to higher
-solidity, or both.  It is uncertain whether numerical models validated with
-physical model data obtained at low Reynolds number should be considered
+numerical models are validated with physical model data that was obtained at
+insufficiently high Reynolds numbers, it cannot be determined whether problems
+with model predictions are caused by Reynolds number effects, issues related to
+higher solidity, or both. It is uncertain whether numerical models validated
+with physical model data obtained at low Reynolds number should be considered
 validated at all, since the scale at which the model will be applied is orders
 of magnitude larger. One way to overcome this uncertainty is to show that the
 scaled physical model test has become Reynolds number independent, and therefore
-validation efforts should be relevant at full-scale.
+validation efforts should be relevant at full-scale. 
 
 For example, the effects of Reynolds number on average power output was shown to
 be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
-testing \cite{Blackwell1976}: Maximum power coefficient,
-$C_{P,\mathrm{max}}$, increased with Reynolds number, $Re_c$, along with a shift
-of the location of $C_{P,\mathrm{max}}$ toward lower tip speed ratios due to
-delayed blade stall. The effects of Reynolds number were quite dramatic over a
-relatively small range of $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$.
+testing \cite{Blackwell1976}: Maximum power coefficient, $C_{P,\mathrm{max}}$,
+increased with Reynolds number, $Re_c$, along with a shift of the location of
+$C_{P,\mathrm{max}}$ toward lower tip speed ratios due to delayed blade stall.
+The effects of Reynolds number were quite dramatic over a relatively small range
+of $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$. More recently, Bachant and
+Wosnik \cite{Bachant2014} showed that turbine performance and near-wake
+characteristics become Reynolds number independent at $Re_c \approx 2 \times
+10^5$.
 
 To date, attempts to validate the CACTUS model have relied on measurements from
-SAFL and UNH \cite{Hill2014}. For the SAFL experiments (RM2), the chord Reynolds
-number, $Re_c \sim 10^4$, was below the threshold needed to properly simulate
-lift and stall characteristics.  For the UNH experiment \cite{Bachant2013}, the
-chord Reynolds number was sufficiently high at $Re_c \approx 2.7 \times 10^5$,
-but the chord/radius ratio and solidity (13.4\%) created instability in the
-free-wake evolution, which caused significant overestimation of power
-coefficient. 
+the Saint Anthony Falls Laboratory (SAFL) \cite{Hill2014} and the University of
+New Hampshire (UNH) \cite{Neary2013, Michelen2014}. For the SAFL experiments
+(RM2), the chord Reynolds number, $Re_c \sim 10^4$, was below the threshold
+needed to properly simulate lift and stall characteristics. For the UNH
+experiment \cite{Bachant2013}, the chord Reynolds number was sufficiently high
+at $Re_c \approx 2.7 \times 10^5$, but the chord/radius ratio and solidity
+(13.4\%) created instability in the free-wake evolution, which caused
+significant overestimation of power coefficient.
 
 The present task is therefore to acquire a new dataset for the lower solidity
 RM2 turbine, but at higher Reynolds numbers. It is also suspected that the strut
