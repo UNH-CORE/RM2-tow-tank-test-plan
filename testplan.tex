@@ -8,7 +8,8 @@
 \usepackage{todonotes}
 \usepackage{appendix}
 \usepackage{pdfpages}
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{url}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 \author{P. Bachant, M. Wosnik, B. Gunawan, V. Neary}
 \title{Test Plan: UNH RM2 Tow Tank Experiment}
@@ -72,7 +73,7 @@ lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
 (MHK) cross-flow turbines typically have higher solidity than cross-flow wind
 turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
 operate in a higher density fluid, unsteady dynamic effects related to the
-blades pitching motion and flow curvature also become more important when
+blades' pitching motion and flow curvature also become more important when
 compared to wind turbines.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
@@ -89,7 +90,7 @@ of magnitude larger. One way to overcome this uncertainty is to show that the
 scaled physical model test has become Reynolds number independent, and therefore
 validation efforts should be relevant at full-scale. 
 
-For example, the effects of Reynolds number on average power output was shown to
+For example, the effect of Reynolds number on average power output was shown to
 be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
 testing \cite{Blackwell1976}: Maximum power coefficient, $C_{P,\mathrm{max}}$,
 increased with Reynolds number, $Re_c$, along with a shift of the location of
@@ -198,7 +199,7 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 
 \section{Facility and instrumentation}
 
-Experiments will be performed in the UNH tow/wave tank, a 30 m long facility
+Experiments will be performed in the UNH tow/wave tank, a 36 m long facility
 with a 3.66 m wide by 2.44 m deep cross-section. The turbine will be mounted in
 a frame built from NACA 0020 struts, attached to the tow carriage by four linear
 bearings, which transfer all streamwise force to a pair of S-beam load cells.
@@ -239,10 +240,11 @@ tare drag runs and vice versa.
 
 Raw data will be stored in HDF5 format, run metadata in text-based JavaScript
 Object Notation (JSON), processed data in comma separated value (CSV), and
-processing code in Python. Raw data files will be uploaded to figshare, which
-will then give the dataset a Digital Object Identifier (DOI) and therefore a
-persistent URL. Processed data and processing code will be hosted on GitHub to
-help facilitate updates to the analysis by both the investigators and third
+processing code in Python. Raw data files will be uploaded to
+figshare\footnote{\url{http://figshare.com}}, which will then give the dataset a
+Digital Object Identifier (DOI) and therefore a persistent URL. Processed data
+and processing code will be hosted on GitHub\footnote{\url{https://github.com}}
+to help facilitate updates to the analysis by both the investigators and third
 parties. This processing code will be written such that raw data is downloaded
 automatically as needed. Versions  or ``releases'' of the Git repository will be
 uploaded to figshare such that they will have their own DOIs, and can be cited
@@ -251,7 +253,7 @@ results will be written and included as part of the repository. All research
 products---documentation, data, code, CAD models, etc.---will be freely
 available under a Creative Commons Attribution 4.0 International license, which
 allows further sharing and adaptation so long as the original source is
-credited. 
+credited.
 
 \renewcommand{\bibname}{References}
 \bibliography{../../../../../Library/Library}
