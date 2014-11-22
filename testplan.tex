@@ -399,8 +399,16 @@ processing code in Python. These formats were chosen for their platform- and
 language-independence, which will allow broadest usage of the data by other
 researchers.
 
-\subsection{Directory structure}
+\subsection{Directory structure and naming conventions}
 
+A sample directory structure is shown in Figure~\ref{fig-dir_structure}. In the
+\texttt{Config/Test plan} folder are the CSV files containing the test parameter
+matrices for each section. Section names are inferred from the CSV file names.
+Raw data files are stored in the \texttt{Data/Raw/\{section\}/\{\#\}}
+subfolders, while processed data from each section are stored in the
+\texttt{Data/Processed} subfolder.
+
+\begin{figure}
 \begin{verbatim}
 RM2-tow-tank/
     Config/
@@ -435,6 +443,9 @@ RM2-tow-tank/
                     acsdata.h5
                     nidata.h5
 \end{verbatim}
+\caption{Sample directory structure for experiment configuration and data.}
+\label{fig-dir_structure}
+\end{figure}
 
 \subsection{Metadata}
 
