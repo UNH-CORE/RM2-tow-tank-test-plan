@@ -399,6 +399,46 @@ processing code in Python. These formats were chosen for their platform- and
 language-independence, which will allow broadest usage of the data by other
 researchers.
 
+\subsection{Directory structure}
+
+\begin{verbatim}
+RM2-tow-tank/
+    Config/
+        Test plan/
+            Top level.csv
+            Perf-0.8.csv
+            Wake-U_1.0-zH_0.25.csv
+            Tare_drag.csv
+            Tare_torque.csv
+        turbine_properties.json
+    Data/
+        Processed/
+            Perf-0.8.csv
+            Tare_drag.csv
+        Raw/
+            Perf-0.8/
+                0/
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+                    vecdata.h5
+                    vecdata.vno
+                1/    
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+                    vecdata.h5
+                    vecdata.vno
+            Tare_drag/
+                0/
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+\end{verbatim}
+
+\subsection{Metadata}
+
+
 \section{Post-processing methods}
 
 \section{Management and archiving}
