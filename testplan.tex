@@ -193,45 +193,6 @@ The progress of this project will be marked by the completion of the following:
 
 \chapter{Experimental setup and methods}
 
-\section{Turbine model}
-
-The turbine is to be a 1:6 scale model of the DOE RM2 rotor, reproduced as
-faithfully as possible. Turbine geometry is to be scaled from the RM2 ``rev 0''
-design report \cite{Barone2011}, with the exception of the shaft diameter, which
-will be a scaled version of the SAFL RM2 shaft \cite{Hill2014}. The hub design
-is also similar to the SAFL model, which may aid in comparison of the results,
-though this is not a top priority. Geometric parameters are shown in
-Table~\ref{tab-turb_geom} and a drawing of the turbine design is shown in
-Figure~\ref{fig-turbine_drawing}. See Appendix~\ref{app-turbine_dwgs} for
-manufacturing drawings.
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{l|l|l}
-   & Full-scale & Model (1:6) \\
-\hline 
-Diameter (m)   & 6.450 & 1.075 \\ 
-Height (m)     & 4.840 & 0.8067 \\ 
-Blade root chord (m) & 0.4000 & 0.06667 \\ 
-Blade tip chord (m)  & 0.2400 & 0.04000 \\ 
-Blade profile & NACA 0021 & NACA 0021 \\ 
-Blade mount & 1/2 chord & 1/2 chord \\ 
-Blade pitch (deg.) & 0.0 & 0.0 \\ 
-Strut profile & NACA 0021 & NACA 0021 \\ 
-Strut chord (m) & 0.3600 & 0.06000 \\ 
-Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\ 
-\end{tabular}
-\caption{RM2 turbine geometric parameters.}
-\label{tab-turb_geom}
-\end{table}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.5\textwidth]{Figures/turbine}
-\caption{Illustration of the UNH RM2 scaled physical model.}
-\label{fig-turbine_drawing}
-\end{figure}
-
 
 \section{Facility and instrumentation}
 
@@ -294,6 +255,46 @@ Drag force, right & Analog bridge input & NI 9237 \\
 \includegraphics[clip,trim=0.01in 0 0 0, width=\textwidth]{Figures/tank_cross_section}
 \caption{Illustration of the experimental setup.}
 \label{fig-exp_setup}
+\end{figure}
+
+
+\section{Turbine model}
+
+The turbine is to be a 1:6 scale model of the DOE RM2 rotor, reproduced as
+faithfully as possible. Turbine geometry is to be scaled from the RM2 ``rev 0''
+design report \cite{Barone2011}, with the exception of the shaft diameter, which
+will be a scaled version of the SAFL RM2 shaft \cite{Hill2014}. The hub design
+is also similar to the SAFL model, which may aid in comparison of the results,
+though this is not a top priority. Geometric parameters are shown in
+Table~\ref{tab-turb_geom} and a drawing of the turbine design is shown in
+Figure~\ref{fig-turbine_drawing}. See Appendix~\ref{app-turbine_dwgs} for
+manufacturing drawings.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l}
+   & Full-scale & Model (1:6) \\
+\hline 
+Diameter (m)   & 6.450 & 1.075 \\ 
+Height (m)     & 4.840 & 0.8067 \\ 
+Blade root chord (m) & 0.4000 & 0.06667 \\ 
+Blade tip chord (m)  & 0.2400 & 0.04000 \\ 
+Blade profile & NACA 0021 & NACA 0021 \\ 
+Blade mount & 1/2 chord & 1/2 chord \\ 
+Blade pitch (deg.) & 0.0 & 0.0 \\ 
+Strut profile & NACA 0021 & NACA 0021 \\ 
+Strut chord (m) & 0.3600 & 0.06000 \\ 
+Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\ 
+\end{tabular}
+\caption{RM2 turbine geometric parameters.}
+\label{tab-turb_geom}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{Figures/turbine}
+\caption{Illustration of the UNH RM2 scaled physical model.}
+\label{fig-turbine_drawing}
 \end{figure}
 
 
