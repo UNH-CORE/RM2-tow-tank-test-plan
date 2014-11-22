@@ -193,7 +193,6 @@ The progress of this project will be marked by the completion of the following:
 
 \chapter{Experimental setup and methods}
 
-
 \section{Facility and instrumentation}
 
 Experiments will be performed in the UNH tow/wave tank, a 36 m long facility
@@ -296,6 +295,66 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 \caption{Illustration of the UNH RM2 scaled physical model.}
 \label{fig-turbine_drawing}
 \end{figure}
+
+
+\section{Test parameters}
+
+Data collection runs will take place during individual tows, for which all
+independent variables---tow speed, tip speed ratio, velocity probe
+position---are held constant. These runs can then be grouped into logical
+``sections,'' in which typically a single independent variable is varied. For
+example, a test section will be dedicated to collecting turbine performance
+curves for a single tow speed, or turbine diameter Reynolds number, where only
+tip speed ratio is varied. An example is shown in Table~\ref{tab-test_section}.
+Additional performance curve test sections are created/executed for different
+tow speeds. For wake characterization, sections will vary the cross-stream
+position of the velocity probe, providing a single profile. Multiple
+cross-stream profiles would be taken at varying vertical locations, each of
+which would represent a test section.
+
+Parameters for each test section will be created in the \texttt{Config/Test
+plan} folder inside the experiment working directory, saved in CSV format as
+input to the
+\textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
+experiment automation software. These CSVs also provide information about each
+run to be used in post-processing. Note that the software is designed to read
+turbine properties (from \texttt{Config/turbine\_properties.json}), e.g. radius
+and height, so inputs for turbine rotational speed (tip speed ratio) and
+Vectrino probe location are in nondimensional form.
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c|c|c}
+Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
+\hline 
+0 & 1.0 & 0.2 & 0.0 & 0.0 \\
+1 & 1.0 & 0.4 & 0.0 & 0.0 \\
+2 & 1.0 & 0.6 & 0.0 & 0.0 \\
+3 & 1.0 & 0.8 & 0.0 & 0.0 \\
+4 & 1.0 & 1.0 & 0.0 & 0.0 \\
+5 & 1.0 & 1.2 & 0.0 & 0.0 \\
+6 & 1.0 & 1.4 & 0.0 & 0.0 \\
+7 & 1.0 & 1.6 & 0.0 & 0.0 \\
+8 & 1.0 & 1.8 & 0.0 & 0.0 \\
+9 & 1.0 & 2.0 & 0.0 & 0.0 \\
+10 & 1.0 & 2.2 & 0.0 & 0.0 \\
+11 & 1.0 & 2.4 & 0.0 & 0.0 \\
+12 & 1.0 & 2.6 & 0.0 & 0.0 \\
+13 & 1.0 & 2.8 & 0.0 & 0.0 \\
+14 & 1.0 & 3.0 & 0.0 & 0.0 \\
+15 & 1.0 & 3.2 & 0.0 & 0.0 \\
+16 & 1.0 & 3.4 & 0.0 & 0.0 \\
+17 & 1.0 & 3.6 & 0.0 & 0.0 \\
+18 & 1.0 & 3.8 & 0.0 & 0.0 \\
+19 & 1.0 & 4.0 & 0.0 & 0.0 \\
+
+\end{tabular}
+\caption{Sample test matrix for acquiring turbine performance curves for a
+single turbine diameter Reynolds number, or tow speed.} 
+\label{tab-test_section}
+\end{table}
+
 
 
 \chapter{Research deliverables}
