@@ -249,7 +249,8 @@ velocity will be measured using a linear encoder with 10 $\mu$m resolution.
 Turbine wake measurements at 1 turbine diameter downstream will be measured with
 a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A list of
 the sensors to be used in the experiment is shown in Table~\ref{tab-sensors},
-and a drawing of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
+instrumentation in Table~\ref{tab-instrumentation}, and a drawing of the
+experimental setup is shown in Figure~\ref{fig-exp_setup}.
 
 \begin{table}[ht]
 \centering
@@ -259,13 +260,33 @@ Measured quantity & Device type & Mfg. \& model & Accuracy \\
 Carriage position & Linear encoder & Renishaw LM15 & 10 $\mu$m/pulse \\
 Turbine angle & Drive encoder output & Kollmorgen AKD & 10$^5$ pulse/rev \\
 Turbine torque & Rotary transducer & Interface T8-200 & $\pm$0.5 Nm \\ 
-Turbine torque & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \\
+Turbine torque (2) & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \\
 Drag force, left & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
 Drag force, right & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
 Fluid velocity & ADV & Nortek Vectrino+ & $\pm$0.5\% val. $\pm$1 mm/s \\
 \end{tabular}
-\caption{Details of the sensors to be used for the experiment.}
+\caption{Details of the sensors to be used for the experiment. Note that ``(2)''
+denotes a secondary redundant measurement.} 
 \label{tab-sensors}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c|c}
+Measured quantity & Device type & Mfg. \& model \\
+\hline 
+Carriage position & Differential counter & NI 9411 \\
+Carriage velocity (2) & Motion controller & ACS NTM \\
+Turbine angle & Differential counter & NI 9411 \\
+Turbine RPM (2) & Motion controller & ACS NTM \\
+Turbine torque & Analog voltage input & NI 9405 \\ 
+Turbine torque (2) & Analog bridge input & NI 9237 \\
+Drag force, left & Analog bridge input & NI 9237 \\
+Drag force, right & Analog bridge input & NI 9237 \\
+\end{tabular}
+\caption{Details of the instrumentation to be used for the experiment. Note that
+``(2)'' denotes a secondary redundant measurement.}
+\label{tab-instrumentation}
 \end{table}
 
 \begin{figure}[ht]
