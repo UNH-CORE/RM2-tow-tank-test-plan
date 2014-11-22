@@ -306,11 +306,13 @@ position---are held constant. These runs can then be grouped into logical
 example, a test section will be dedicated to collecting turbine performance
 curves for a single tow speed, or turbine diameter Reynolds number, where only
 tip speed ratio is varied. An example is shown in Table~\ref{tab-test_section}.
-Additional performance curve test sections are created/executed for different
-tow speeds. For wake characterization, sections will vary the cross-stream
-position of the velocity probe, providing a single profile. Multiple
-cross-stream profiles would be taken at varying vertical locations, each of
-which would represent a test section.
+Note that the upper limit of tip speed ratio will be determined in ``shakedown''
+runs, and chosen to be just above the value at which turbine power coefficient
+reaches zero. Additional performance curve test sections are created/executed
+for different tow speeds. For wake characterization, sections will vary the
+cross-stream position of the velocity probe, providing a single profile.
+Multiple cross-stream profiles would be taken at varying vertical locations,
+each of which would represent a test section.
 
 Parameters for each test section will be created in the \texttt{Config/Test
 plan} folder inside the experiment working directory, saved in CSV format as
@@ -356,6 +358,15 @@ single turbine diameter Reynolds number, or tow speed.}
 \end{table}
 
 
+\section{Determining Reynolds number independence}
+
+In order to establish that we have reached a Reynolds number independent regime
+for turbine performance, we will acquire multiple performance curves, starting
+at a tow speed of approximately 0.4 m/s, incrementing by 0.2 m/s, until
+convergence is seen in the measured power coefficient. This will be determined
+by post-processing the data concurrently.
+
+\todo[inline]{Add sample plot of Re convergence, e.g. from METS paper.}
 
 \chapter{Research deliverables}
 
