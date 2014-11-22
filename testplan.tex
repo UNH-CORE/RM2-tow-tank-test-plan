@@ -247,8 +247,26 @@ will be measured using the servo drive's emulated encoder output, set to $10^5$
 counts per turbine shaft revolution. Carriage speed, and therefore inflow
 velocity will be measured using a linear encoder with 10 $\mu$m resolution.
 Turbine wake measurements at 1 turbine diameter downstream will be measured with
-a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A drawing
-of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
+a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A list of
+the sensors to be used in the experiment is shown in Table~\ref{tab-sensors},
+and a drawing of the experimental setup is shown in Figure~\ref{fig-exp_setup}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c|c}
+Measured quantity & Device type & Mfg. \& model & Accuracy \\
+\hline 
+Carriage position & Linear encoder & Renishaw LM15 & 10 $\mu$m/pulse \\
+Turbine angle & Drive encoder output & Kollmorgen AKD & 10$^5$ pulse/rev \\
+Turbine torque & Rotary transducer & Interface T8-200 & $\pm$0.5 Nm \\ 
+Turbine torque & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \\
+Drag force, left & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
+Drag force, right & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
+Fluid velocity & ADV & Nortek Vectrino+ & $\pm$0.5\% val. $\pm$1 mm/s \\
+\end{tabular}
+\caption{Details of the sensors to be used for the experiment.}
+\label{tab-sensors}
+\end{table}
 
 \begin{figure}[ht]
 \centering
