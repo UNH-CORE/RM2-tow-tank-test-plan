@@ -554,19 +554,35 @@ Metadata recorded for each run will include:
 
 \section{Management and archiving}
 
+This experiment will produce $\sim 10$ GB of data. The two guiding principles
+for the management of this data are openness and usefulness, i.e., we want
+potential users to know exactly how the data was created, and be able to reuse
+the data as conveniently as possible. We will make available all raw and
+processed data, along with any software written for the processing, analysis,
+and visualization of this data.
+
+Since the dataset is of moderate size, we want to encourage users to first
+obtain the software and processed data, since these are of most interest for
+generating figures or comparing to numerical modeling results. However, if users
+want to reanalyze the raw data, the software will be written such that raw data
+files are downloaded as needed, rather than one bulk download.
+
 Raw data files will be uploaded to figshare\footnote{\url{http://figshare.com}},
 which will then give the dataset a Digital Object Identifier (DOI) and therefore
 a persistent URL. Processed data and processing code will be hosted on
-GitHub\footnote{\url{https://github.com}} to help facilitate updates to the
-analysis by both the investigators and third parties. This processing code will
-be written such that raw data is downloaded automatically as needed. Versions 
-or ``releases'' of the Git repository will be uploaded to figshare such that
-they will have their own DOIs, and can be cited appropriately in publications.
-Lastly, a report detailing the experiment and the results will be written and
-included as part of the repository. All research products---documentation, data,
-code, CAD models, etc.---will be freely available under a Creative Commons
-Attribution 4.0 International license, which allows further sharing and
-adaptation so long as the original source is credited.
+GitHub\footnote{\url{https://github.com/UNH-CORE/RM2-tow-tank}} to help
+facilitate updates to the analysis by both the investigators and third parties.
+This processing code will be written such that raw data is downloaded
+automatically as needed. Tagged versions or ``releases'' of the Git repository
+will be uploaded to figshare such that they will have their own DOIs, and can be
+cited appropriately in publications.
+
+\subsection{Licensing} 
+
+All research products---documentation, data, code, CAD models, etc.---will be
+freely available under a Creative Commons Attribution 4.0 International license,
+which allows further sharing and adaptation so long as the original source is
+credited.
 
 
 \chapter{Summary}
