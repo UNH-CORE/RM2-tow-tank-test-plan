@@ -344,39 +344,6 @@ and height, so inputs for turbine rotational speed (tip speed ratio) and
 Vectrino probe location are in nondimensional form.
 
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{c|c|c|c|c}
-Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
-\hline 
-0 & 1.0 & 0.2 & 0.0 & 0.0 \\
-1 & 1.0 & 0.4 & 0.0 & 0.0 \\
-2 & 1.0 & 0.6 & 0.0 & 0.0 \\
-3 & 1.0 & 0.8 & 0.0 & 0.0 \\
-4 & 1.0 & 1.0 & 0.0 & 0.0 \\
-5 & 1.0 & 1.2 & 0.0 & 0.0 \\
-6 & 1.0 & 1.4 & 0.0 & 0.0 \\
-7 & 1.0 & 1.6 & 0.0 & 0.0 \\
-8 & 1.0 & 1.8 & 0.0 & 0.0 \\
-9 & 1.0 & 2.0 & 0.0 & 0.0 \\
-10 & 1.0 & 2.2 & 0.0 & 0.0 \\
-11 & 1.0 & 2.4 & 0.0 & 0.0 \\
-12 & 1.0 & 2.6 & 0.0 & 0.0 \\
-13 & 1.0 & 2.8 & 0.0 & 0.0 \\
-14 & 1.0 & 3.0 & 0.0 & 0.0 \\
-15 & 1.0 & 3.2 & 0.0 & 0.0 \\
-16 & 1.0 & 3.4 & 0.0 & 0.0 \\
-17 & 1.0 & 3.6 & 0.0 & 0.0 \\
-18 & 1.0 & 3.8 & 0.0 & 0.0 \\
-19 & 1.0 & 4.0 & 0.0 & 0.0 \\
-
-\end{tabular}
-\caption{Sample test matrix for acquiring turbine performance curves for a
-single turbine diameter Reynolds number, or tow speed.} 
-\label{tab-test_section}
-\end{table}
-
-
 \section{Determining tank settling time}
 
 \todo[inline]{Finish this up.}
@@ -422,52 +389,6 @@ language-independence, which will allow broadest usage of the data by other
 researchers. A summary of data file types and names is presented in
 Table~\ref{tab-data_description}.
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{l|l|l|l}
-Data & Sample rate & File type & File name \\
-\hline 
-\begin{tabular}[t]{@{}l@{}}
-\texttt{time} \\
-\texttt{carriage\_pos} \\
-\texttt{turbine\_angle} \\
-\texttt{torque\_trans} \\
-\texttt{torque\_arm} \\
-\texttt{drag\_left} \\
-\texttt{drag\_right}
-\end{tabular} & 2 kHz & HDF5 & \texttt{nidata.h5} \\ 
-\hline
-\begin{tabular}[t]{@{}l@{}}
-\texttt{time} \\
-\texttt{carriage\_vel} \\
-\texttt{turbine\_rpm} \\
-\end{tabular} & 1 kHz & HDF5 & \texttt{acsdata.h5} \\ 
-\hline
-\begin{tabular}[t]{@{}l@{}}
-\texttt{time} \\
-\texttt{u} \\
-\texttt{v} \\
-\texttt{w} \\
-\texttt{corr\_u} \\
-\texttt{corr\_v} \\
-\texttt{corr\_w} \\
-\texttt{snr\_u} \\
-\texttt{snr\_v} \\
-\texttt{snr\_w}
-\end{tabular} & 200 Hz & HDF5 & \texttt{vecdata.h5} \\ 
-\hline
-\begin{tabular}[t]{@{}l@{}}
-\texttt{vecdata.dat} \\
-\texttt{vecdata.hdr} \\
-\texttt{vecdata.pck} \\
-\end{tabular} & 200 Hz & Vectrino binary & \texttt{vecdata.vno} \\ 
-
-\end{tabular}
-\caption{Raw data description.}
-\label{tab-data_description}
-\end{table}
-
-
 
 \subsection{Directory structure and naming conventions}
 
@@ -476,49 +397,7 @@ A sample directory structure is shown in Figure~\ref{fig-dir_structure}. In the
 matrices for each test section. Section names are inferred from the CSV file
 names. Raw data files are stored in the \texttt{Data/Raw/\{section\}/\{run\}}
 subfolders, while processed data from each section are stored in the
-\texttt{Data/Processed} subfolder.
-
-\begin{figure}
-\begin{verbatim}
-RM2-tow-tank/
-    Config/
-        Test plan/
-            Top level.csv
-            Perf-0.8.csv
-            Wake-U_1.0-zH_0.25.csv
-            Tare_drag.csv
-            Tare_torque.csv
-            Settling.csv
-        turbine_properties.json
-        settling_times.csv
-        raw_data_urls.json
-    Data/
-        Processed/
-            Perf-0.8.csv
-            Tare_drag.csv
-        Raw/
-            Perf-0.8/
-                0/
-                    metadata.json
-                    acsdata.h5
-                    nidata.h5
-                    vecdata.h5
-                    vecdata.vno
-                1/    
-                    metadata.json
-                    acsdata.h5
-                    nidata.h5
-                    vecdata.h5
-                    vecdata.vno
-            Tare_drag/
-                0/
-                    metadata.json
-                    acsdata.h5
-                    nidata.h5
-\end{verbatim}
-\caption{Sample directory structure for experiment configuration and data.}
-\label{fig-dir_structure}
-\end{figure}
+\texttt{Data/Processed} subfolder---one CSV file per experiment section.
 
 \subsection{Metadata}
 
@@ -615,6 +494,130 @@ deliverables.}
 \bibliographystyle{ieeetr}
 
 \begin{appendices}
+
+\chapter{Sample test plan matrices}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c|c|c}
+Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
+\hline 
+0 & 1.0 & 0.2 & 0.0 & 0.0 \\
+1 & 1.0 & 0.4 & 0.0 & 0.0 \\
+2 & 1.0 & 0.6 & 0.0 & 0.0 \\
+3 & 1.0 & 0.8 & 0.0 & 0.0 \\
+4 & 1.0 & 1.0 & 0.0 & 0.0 \\
+5 & 1.0 & 1.2 & 0.0 & 0.0 \\
+6 & 1.0 & 1.4 & 0.0 & 0.0 \\
+7 & 1.0 & 1.6 & 0.0 & 0.0 \\
+8 & 1.0 & 1.8 & 0.0 & 0.0 \\
+9 & 1.0 & 2.0 & 0.0 & 0.0 \\
+10 & 1.0 & 2.2 & 0.0 & 0.0 \\
+11 & 1.0 & 2.4 & 0.0 & 0.0 \\
+12 & 1.0 & 2.6 & 0.0 & 0.0 \\
+13 & 1.0 & 2.8 & 0.0 & 0.0 \\
+14 & 1.0 & 3.0 & 0.0 & 0.0 \\
+15 & 1.0 & 3.2 & 0.0 & 0.0 \\
+16 & 1.0 & 3.4 & 0.0 & 0.0 \\
+17 & 1.0 & 3.6 & 0.0 & 0.0 \\
+18 & 1.0 & 3.8 & 0.0 & 0.0 \\
+19 & 1.0 & 4.0 & 0.0 & 0.0 \\
+
+\end{tabular}
+\caption{Sample test matrix for acquiring turbine performance curves for a
+single turbine diameter Reynolds number, or tow speed.} 
+\label{tab-test_section}
+\end{table}
+
+\chapter{Data file organization and content}
+
+\begin{figure}
+\begin{verbatim}
+RM2-tow-tank/
+    Config/
+        Test plan/
+            Top level.csv
+            Perf-0.8.csv
+            Wake-U_1.0-zH_0.25.csv
+            Tare_drag.csv
+            Tare_torque.csv
+            Settling.csv
+        turbine_properties.json
+        settling_times.csv
+        raw_data_urls.json
+    Data/
+        Processed/
+            Perf-0.8.csv
+            Tare_drag.csv
+        Raw/
+            Perf-0.8/
+                0/
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+                    vecdata.h5
+                    vecdata.vno
+                1/    
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+                    vecdata.h5
+                    vecdata.vno
+            Tare_drag/
+                0/
+                    metadata.json
+                    acsdata.h5
+                    nidata.h5
+\end{verbatim}
+\caption{Sample directory structure for experiment configuration and data.}
+\label{fig-dir_structure}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l|l}
+Data & Sample rate & File type & File name \\
+\hline 
+\begin{tabular}[t]{@{}l@{}}
+\texttt{time} \\
+\texttt{carriage\_pos} \\
+\texttt{turbine\_angle} \\
+\texttt{torque\_trans} \\
+\texttt{torque\_arm} \\
+\texttt{drag\_left} \\
+\texttt{drag\_right}
+\end{tabular} & 2 kHz & HDF5 & \texttt{nidata.h5} \\ 
+\hline
+\begin{tabular}[t]{@{}l@{}}
+\texttt{time} \\
+\texttt{carriage\_vel} \\
+\texttt{turbine\_rpm} \\
+\end{tabular} & 1 kHz & HDF5 & \texttt{acsdata.h5} \\ 
+\hline
+\begin{tabular}[t]{@{}l@{}}
+\texttt{time} \\
+\texttt{u} \\
+\texttt{v} \\
+\texttt{w} \\
+\texttt{corr\_u} \\
+\texttt{corr\_v} \\
+\texttt{corr\_w} \\
+\texttt{snr\_u} \\
+\texttt{snr\_v} \\
+\texttt{snr\_w}
+\end{tabular} & 200 Hz & HDF5 & \texttt{vecdata.h5} \\ 
+\hline
+\begin{tabular}[t]{@{}l@{}}
+\texttt{vecdata.dat} \\
+\texttt{vecdata.hdr} \\
+\texttt{vecdata.pck} \\
+\end{tabular} & 200 Hz & Vectrino binary & \texttt{vecdata.vno} \\ 
+
+\end{tabular}
+\caption{Raw data file description.}
+\label{tab-data_description}
+\end{table}
+
 
 \chapter{Turbine model manufacturing drawings}
 
