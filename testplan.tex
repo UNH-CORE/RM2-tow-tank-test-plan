@@ -67,20 +67,38 @@
 
 \chapter{Introduction}
 
-The blades of cross-flow turbines experience large variations in angles of
-attack as they rotate about their axis (``cross-flow turbine'' means the axis of
-rotation is perpendicular to flow direction---can be vertical or horizontal).
-This range of angles of attack becomes larger as the tip speed ratio
-$\lambda=\omega R/U_\infty$ decreases \cite{Para2002}. The variation is
-typically sufficiently large that the blades operate under dynamic stall, which
-is a complex unsteady process, deviating significantly from static foil
-behavior. Furthermore, the higher the solidity of a cross-flow turbine, the
-lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
-(MHK) cross-flow turbines typically have higher solidity than cross-flow wind
-turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
-operate in a higher density fluid, unsteady dynamic effects related to the
-blades' pitching motion and flow curvature also become more important when
-compared to wind turbines.
+Sandia National Laboratory (SNL) developed the cross-flow turbine, Reference
+Model 2 (RM2), to estimate the levelized cost of energy (LCOE), and to provide
+open power performance data from scaled model testing that can be used to
+validate open-source design tools.  More details on the reference modeling
+effort are provided in Neary et al.
+
+\todo[inline]{Get citation for Neary et al., 2014}
+
+Dimensional analysis provides scaling laws that are used to upscale model test
+data into performance and design information for a full-scale prototype turbine.
+ For hydrokinetic turbines, hydrodynamic similitude is achieved when the chord
+Reynolds number $Re$, Froude number $Fr$, and the tip speed ratio
+$\lambda=\omega R/U_\infty$ of the model and the full-scale device are the same.
+ It is rare to achieve perfect similitude for $Re$, but a threshold value should
+be exceeded, such that scale model results can be extrapolated.  
+
+\todo[inline]{Get ref for ``Froude number similitude in tow tank testing is
+important for upscaling wake flow data'' before adding above.}
+
+As a cross-flow turbine, the RM2 blades will experience large variations in
+angles of attack as they rotate about their axis (``cross-flow turbine'' means
+the axis of rotation is perpendicular to flow direction---can be vertical or
+horizontal). This range of angles of attack becomes larger as the tip speed
+ratio decreases \cite{Para2002}. The variation is typically sufficiently large
+that the blades operate under dynamic stall, which is a complex unsteady
+process, deviating significantly from static foil behavior. Furthermore, the
+higher the solidity of a cross-flow turbine, the lower the optimal tip-speed
+ratio at which it operates. Marine Hydrokinetic (MHK) cross-flow turbines
+typically have higher solidity than cross-flow wind turbines (VAWT), and hence
+operate at lower tip-speed ratios. Since MHK turbines operate in a higher
+density fluid, unsteady dynamic effects related to the blades' pitching motion
+and flow curvature also become more important when compared to wind turbines.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
