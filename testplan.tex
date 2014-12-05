@@ -125,15 +125,25 @@ Wosnik \cite{Bachant2014} showed that turbine performance and near-wake
 characteristics become Reynolds number independent at $Re_c \approx 2 \times
 10^5$.
 
-To date, attempts to validate the CACTUS model have relied on measurements from
-the Saint Anthony Falls Laboratory (SAFL) \cite{Hill2014} and the University of
-New Hampshire (UNH) \cite{Neary2013, Michelen2014}. For the SAFL experiments
-(RM2), the chord Reynolds number, $Re_c \sim 10^4$, was below the threshold
-needed to properly simulate lift and stall characteristics. For the UNH
-experiment \cite{Bachant2013}, the chord Reynolds number was sufficiently high
-at $Re_c \approx 2.7 \times 10^5$, but the chord/radius ratio and solidity
-(13.4\%) created instability in the free-wake evolution, which caused
-significant overestimation of power coefficient.
+The need for experimental data that is relevant to full-scale behavior stems
+from the need to validate numerical models---most importantly mid-fidelity
+models---desirable for MHK developers to predict the performance of their
+cross-flow turbine designs, since physical modeling at appropriate scales can be
+prohibitively expensive in the early stages of engineering. Furthermore,
+Navier--Stokes-based computational fluid dynamics (CFD) simulations require
+modeling in 3 dimensions, which generally necessitates high performance
+computing---a resource that is not commonly available, and more expensive.
+
+To date, attempts to validate SNL's mid-fidelity CACTUS vortex line model
+\cite{Murray2011} have relied on measurements from the Saint Anthony Falls
+Laboratory (SAFL) \cite{Hill2014} and the University of New Hampshire (UNH)
+\cite{Neary2013, Michelen2014}. For the SAFL experiments (RM2), the chord
+Reynolds number, $Re_c \sim 10^4$, was below the threshold needed to properly
+simulate lift and stall characteristics. For the UNH experiment
+\cite{Bachant2013}, the chord Reynolds number was sufficiently high at $Re_c
+\approx 2.7 \times 10^5$, but the chord/radius ratio and solidity (13.4\%)
+created instability in the free-wake evolution, which caused significant
+overestimation of power coefficient.
 
 The present task is therefore to acquire a new dataset for the lower solidity
 RM2 turbine, but at higher Reynolds numbers. It is also suspected that the strut
@@ -151,21 +161,13 @@ tank at the University of New Hampshire.
 The overarching goal of this project is to collect a Reynolds number independent
 performance dataset for a 1:6 scale RM2 turbine, which is repeatable, and which
 can be used to investigate the accuracy of numerical models, e.g., mid-fidelity
-models such as CACTUS. These mid-fidelity models are needed by MHK developers to
-predict the performance of their cross-flow turbine designs, since physical
-modeling at appropriate scales can be prohibitively expensive in the early
-stages of engineering. Furthermore, Navier--Stokes-based computational fluid
-dynamics (CFD) simulations require modeling in 3 dimensions, which generally
-necessitates high performance computing---a resource that is not commonly
-available, and more expensive.
-
-The project will provide insight on the physics of hydrokinetic cross-flow
-turbines, including the importance of blade strut drag on turbine power output,
-which will determine what level of focus is necessary in improving mid-fidelity
-modeling of these effects. The experimental dataset will be shared publicly and
-can be used for validating other numerical models/codes used by developers and
-DOE partners. The study goals can be distilled into the following main
-objectives:
+models such as CACTUS. The project will provide insight on the physics of
+hydrokinetic cross-flow turbines, including the importance of blade strut drag
+on turbine power output, which will determine what level of focus is necessary
+in improving mid-fidelity modeling of these effects. The experimental dataset
+will be shared publicly and can be used for validating other numerical
+models/codes used by developers and DOE partners. The study goals can be
+distilled into the following main objectives:
 
 \begin{enumerate}
 
