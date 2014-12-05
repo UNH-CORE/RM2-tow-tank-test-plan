@@ -226,6 +226,47 @@ primitive measurements are required.}
 
 \todo[inline]{Define tip speed ratio, power coefficient, etc. here.}
 
+Turbine performance is characterized by the nondimensional power coefficient
+\begin{equation}
+C_P = \frac{P}{\frac{1}{2} \rho A U_\infty^3},
+\label{eq-cp}
+\end{equation}
+where $P$ is the mechanical power output (the product of the shaft torque $T$
+and angular velocity $\omega$), $\rho$ is the fluid density, $A$ is the
+turbine's frontal area, and $U_\infty$ is the free stream velocity. Also of
+interest is the overall drag (a.k.a. thrust) coefficient the device imparts on
+the flow in which its placed, defined as
+\begin{equation}
+C_D = \frac{F_D}{\frac{1}{2} \rho A U_\infty^2},
+\label{eq-cd}
+\end{equation}
+where $F_D$ is the streamwise component of the force on the rotor.
+
+A performance curve, which is a plot of $C_P$ versus nondimensional rotation
+rate---tip speed ratio $\lambda$---describes the device's behavior over its
+range of operation. An example of is shown in Figure~\ref{fig-cp}. In this
+experiment we will create similar curves by measuring turbine power coefficient
+over a range of prescribed $\lambda$, where the tow speed, or turbine diameter
+Reynolds number $Re_D$ is held constant. By creating curves for various $Re_D$,
+we seek a condition where the power coefficient at the optimal tip speed ratio
+begins to converge asymptotically to some limit, similar to the approach used in
+\cite{Bachant2014}, the data from which is plotted in
+Figure~\ref{fig-cp_re_dep}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.65\textwidth]{Figures/cp_vs_tsr.pdf}
+\caption{Example of a turbine performance curve.}
+\label{fig-cp}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.65\textwidth]{Figures/re_dep_cp.pdf}
+\caption{Normalized turbine power coefficient plotted versus Reynolds number, from \cite{Bachant2014}.}
+\label{fig-cp_re_dep}
+\end{figure}
+
 \section{Facility and instrumentation}
 
 Experiments will be performed in the UNH tow/wave tank, a 36 m long facility
@@ -383,7 +424,7 @@ experiment configuration---one value for each tow speed.
 
 In order to establish that we have reached a Reynolds number independent regime
 for turbine performance, we will acquire multiple performance curves, starting
-at a tow speed of approximately 0.4 m/s, incrementing by 0.2 m/s, until
+at a tow speed of 0.4 m/s, incrementing by 0.2 m/s, until
 convergence is seen in the measured power coefficient. This will be determined
 by post-processing the data concurrently.
 
