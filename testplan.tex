@@ -221,11 +221,6 @@ The progress of this project will be marked by the completion of the following:
 
 \chapter{Experimental setup and methods}
 
-\todo[inline]{List and define quantities we want to obtain, then describe what
-primitive measurements are required.}
-
-\todo[inline]{Define tip speed ratio, power coefficient, etc. here.}
-
 Turbine performance is characterized by the nondimensional power coefficient
 \begin{equation}
 C_P = \frac{P}{\frac{1}{2} \rho A U_\infty^3},
@@ -333,7 +328,15 @@ Drag force, right & Analog bridge input & NI 9237 \\
 
 \subsection{Synchronization of instrumentation subsystems}
 
-\todo[inline]{Add this.}
+The three data acquisition instrumentation subsystems---motion controller, NI
+DAQ (performance measurements), and Vectrino+ (wake velocity
+measurements)---will begin sampling at precisely the same time each run, after
+being triggered by a TTL pulse created by the motion controller. This strategy
+retains synchronization for all performance signal samples (tow speed, torque,
+drag, angular velocity), ensuring precise calculation of, e.g., power
+coefficient. Since there is also synchronization of the initial sample from each
+three subsystems, correlation of events in the performance and wake signals is
+also possible.
 
 \subsection{Tare drag and torque compensation} 
 
