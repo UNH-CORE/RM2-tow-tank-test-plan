@@ -456,6 +456,46 @@ cross-stream and vertical coordinates $y/R = \pm 3$ and $z/H = 0$--$0.75$,
 respectively. Measurements at these locations will help to visualize the complex
 three-dimensional flow field present in the near-wake.
 
+\section{Data processing}
+
+Turbine shaft angular velocity and carriage speed must be computed by taking the
+derivatives of the measured position time series. This will be done using a
+second order central difference scheme, and may be subsequently filtered with a
+moving average filter to help reduce noise introduced by the differentiation. To
+check that excess high frequency energy was not removed during filtering, the
+velocity signals can be compared to their redundant measurements recorded from
+the motion controller.
+
+After the velocity time series are calculated, they are used to calculate time
+series for instantaneous $\lambda$, $C_P$, and $C_D$, from which mean values are
+computed.
+
+Data collected for each run will include a transient period, where the tow
+carriage accelerates, after which turbine torque and wake velocities settle to
+become stationary or periodic. It is this ``steady-state'' duration that we are
+interested in. The duration will be indentified for several runs at each tow
+speed by manual inspection. The tail end will then be truncated such that the
+data to be processed includes an integer number of blade passages, to minimize
+bias from periodicity. The time interval will be recorded as part of the reduced
+data for each run, along with the number of blade passages and revolutions.
+
+Wake velocity data will be post-processed using methods outlined in Gunawan et
+al. \cite{Gunawan2011}. Corrections will include, for example, eliminating
+and/or replacing spikes \cite{Goring2002}, Doppler noise \cite{Voulgaris1998},
+and filtering \cite{Garcia2005}.
+
+\subsection{Uncertainty analysis}
+
+As mentioned previously, one of the primary uses for the data collected is
+comparison with results from numerical modeling, and this comparison requires an
+estimate for what range of values from the experimental result includes the true
+value. This range---or uncertainty---results from a combination of systematic
+and random errors. The random error can be inferred from
+the sample standard deviation and the systematic from the sensor calibrations or
+datasheets. Combining both sources of error, along with their propagation into quantities derived from multiple measurements, will follow the procedures outlined in Coleman and Steele (2009) \cite{ColemanSteele}.
+
+\todo[inline]{Write more about uncertainty analysis.}
+
 
 \chapter{Research products}
 
@@ -536,12 +576,6 @@ Metadata recorded for each run will include:
 
 \end{itemize}
 
-
-\subsection{Post-processing}
-
-\todo[inline]{Describe this process, including extraction of steady state
-duration, and elimination of bad velocity datapoints from Vince and Budi's
-papers}
 
 \section{Management and archiving}
 
