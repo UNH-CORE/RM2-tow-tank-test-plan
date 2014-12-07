@@ -297,19 +297,20 @@ width=0.49\textwidth]{Figures/test_bed_photo}
 \begin{table}[ht]
 \centering
 \begin{tabular}{c|c|c|c}
-Measured quantity & Device type & Mfg. \& model & Accuracy \\
+Measured quantity & Device type & Mfg. \& model & Nominal accuracy \\
 \hline 
-Carriage position & Linear encoder & Renishaw LM15 & 10 $\mu$m/pulse \\
-Turbine angle & Drive encoder output & Kollmorgen AKD & 10$^5$ pulse/rev \\
-Turbine torque & Rotary transducer & Interface T8-200 & $\pm$0.5 Nm \\ 
-Turbine torque (2) & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \\
-Drag force, left & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
-Drag force, right & Load cell & Sentran ZB3-500 & $\pm$0.6 N \\
-Fluid velocity & ADV & Nortek Vectrino+ & $\pm$0.5\% $\pm$1 mm/s \\
+Carriage position & Linear encoder & Renishaw LM15 & 10 $\mu$m/pulse \cite{RenishawLM15}\\
+Turbine angle & Servo encoder output & Kollmorgen AKD & 10$^5$ pulse/rev \cite{KollmorgenAKD}\\
+Turbine torque & Rotary transducer & Interface T8-200 & $\pm$0.5 Nm \cite{InterfaceT8}\\ 
+Turbine torque (2) & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \cite{SentranZB}\\
+Drag force, left & Load cell & Sentran ZB3-500 & $\pm$0.6 N \cite{SentranZB}\\
+Drag force, right & Load cell & Sentran ZB3-500 & $\pm$0.6 N \cite{SentranZB}\\
+Fluid velocity & ADV & Nortek Vectrino+ & $\pm$0.5\% $\pm$1 mm/s \cite{NortekVectrino}\\
 \end{tabular}
 \caption{Details of the sensors to be used for the experiment. Note that ``(2)''
-denotes a secondary redundant measurement.} 
-\label{tab-sensors}
+denotes a secondary redundant measurement. ``Turbine torque (2)'' nominal
+accuracy estimated by combining load cell accuracy and arm machining tolerances
+($\pm 1 \times 10^{-4}$ m) as root-sum-square.} \label{tab-sensors}
 \end{table}
 
 \begin{table}[ht]
