@@ -248,14 +248,14 @@ begins to converge asymptotically to some limit, similar to the approach used in
 \cite{Bachant2014}, the data from which is plotted in
 Figure~\ref{fig-cp_re_dep}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.65\textwidth]{Figures/cp_vs_tsr.pdf}
 \caption{Example of a turbine performance curve.}
 \label{fig-cp}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.65\textwidth]{Figures/re_dep_cp.pdf}
 \caption{Normalized turbine power coefficient plotted versus Reynolds number, from \cite{Bachant2014}.}
@@ -265,21 +265,34 @@ Figure~\ref{fig-cp_re_dep}.
 \section{Facility and instrumentation}
 
 Experiments will be performed in the UNH tow/wave tank, a 36 m long facility
-with a 3.66 m wide by 2.44 m deep cross-section. The turbine will be mounted in
-a frame built from NACA 0020 struts, attached to the tow carriage by four linear
-bearings, which transfer all streamwise force to a pair of S-beam load cells.
-The turbine shaft RPM will be controlled by a servo motor system, which allows
-prescription of the turbine tip speed ratio. The load torque will be measured by
-an inline rotary torque transducer and a load cell mounted at a fixed distance
-from the servo motor, providing a redundant measurement. Turbine shaft angle
-will be measured using the servo drive's emulated encoder output, set to $10^5$
-counts per turbine shaft revolution. Carriage speed, and therefore inflow
-velocity will be measured using a linear encoder with 10 $\mu$m resolution.
-Turbine wake measurements at 1 turbine diameter downstream will be measured with
-a Nortek Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A list of
-the sensors to be used in the experiment is shown in Table~\ref{tab-sensors},
+with a 3.66 m wide by 2.44 m deep cross-section, pictured in
+Figure~\ref{fig-tow_tank}. The turbine will be mounted in a frame built from
+NACA 0020 struts, attached to the tow carriage by four linear bearings, which
+transfer all streamwise force to a pair of S-beam load cells. The turbine shaft
+RPM will be controlled by a servo motor system, which allows prescription of the
+turbine tip speed ratio. The load torque will be measured by an inline rotary
+torque transducer and a load cell mounted at a fixed distance from the servo
+motor, providing a redundant measurement. Turbine shaft angle will be measured
+using the servo drive's emulated encoder output, set to $10^5$ counts per
+turbine shaft revolution. Carriage speed, and therefore inflow velocity will be
+measured using a linear encoder with 10 $\mu$m resolution. Turbine wake
+measurements at 1 turbine diameter downstream will be measured with a Nortek
+Vectrino+ acoustic Doppler velocimeter, sampling at 200 Hz. A list of the
+sensors to be used in the experiment is shown in Table~\ref{tab-sensors},
 instrumentation in Table~\ref{tab-instrumentation}, and a drawing of the
 experimental setup is shown in Figure~\ref{fig-exp_setup}.
+
+
+\begin{figure}[h!]
+\centering 
+\includegraphics[clip,trim=0 1in 0 1in, 
+width=0.49\textwidth]{Figures/tow_tank_length} 
+\includegraphics[clip,trim=0.67in 0 0 0, 
+width=0.49\textwidth]{Figures/test_bed_photo} 
+\caption{Photos of the UNH towing tank and turbine test bed.} 
+\label{fig-tow_tank}
+\end{figure}
+
 
 \begin{table}[ht]
 \centering
@@ -320,7 +333,7 @@ Drag force, right & Analog bridge input & NI 9237 \\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[clip,trim=0.01in 0 0 0, width=\textwidth]{Figures/tank_cross_section}
+\includegraphics[clip,trim=0.01in 0 0 0, width=0.95\textwidth]{Figures/tank_cross_section}
 \caption{Illustration of the experimental setup.}
 \label{fig-exp_setup}
 \end{figure}
