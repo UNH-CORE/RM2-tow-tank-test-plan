@@ -628,11 +628,12 @@ deliverables.}
 
 \chapter{Sample test plan matrices}
 
-\begin{table}[ht]
+\begin{table}[!ht]
 \centering
+\scalebox{0.7}{
 \begin{tabular}{c|c|c|c|c}
 Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
-\hline 
+\hline
 0 & 1.0 & 0.2 & 0.0 & 0.0 \\
 1 & 1.0 & 0.4 & 0.0 & 0.0 \\
 2 & 1.0 & 0.6 & 0.0 & 0.0 \\
@@ -652,13 +653,66 @@ Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
 16 & 1.0 & 3.4 & 0.0 & 0.0 \\
 17 & 1.0 & 3.6 & 0.0 & 0.0 \\
 18 & 1.0 & 3.8 & 0.0 & 0.0 \\
-19 & 1.0 & 4.0 & 0.0 & 0.0 \\
-
-\end{tabular}
-\caption{Sample test matrix for acquiring turbine performance curves for a
-single turbine diameter Reynolds number, or tow speed.} 
+19 & 1.0 & 4.0 & 0.0 & 0.0 
+\end{tabular}}
+\hspace{0.75in}
+\scalebox{0.7}{
+\begin{tabular}{c|c|c|c|c}
+Run & $U_\infty$ & $\lambda$ & $y/R$   & $z/H$ \\
+\hline
+0   & $U_0$        & $\lambda_0$ & -3    & 0   \\
+1   & $U_0$        & $\lambda_0$ & -2.75 & 0   \\
+2   & $U_0$        & $\lambda_0$ & -2.5  & 0   \\
+3   & $U_0$        & $\lambda_0$ & -2.25 & 0   \\
+4   & $U_0$        & $\lambda_0$ & -2    & 0   \\
+5   & $U_0$        & $\lambda_0$ & -1.8  & 0   \\
+6   & $U_0$        & $\lambda_0$ & -1.6  & 0   \\
+7   & $U_0$        & $\lambda_0$ & -1.5  & 0   \\
+8   & $U_0$        & $\lambda_0$ & -1.4  & 0   \\
+9   & $U_0$        & $\lambda_0$ & -1.3  & 0   \\
+10  & $U_0$        & $\lambda_0$ & -1.2  & 0   \\
+11  & $U_0$        & $\lambda_0$ & -1.1  & 0   \\
+12  & $U_0$        & $\lambda_0$ & -1    & 0   \\
+13  & $U_0$        & $\lambda_0$ & -0.9  & 0   \\
+14  & $U_0$        & $\lambda_0$ & -0.8  & 0   \\
+15  & $U_0$        & $\lambda_0$ & -0.7  & 0   \\
+16  & $U_0$        & $\lambda_0$ & -0.6  & 0   \\
+17  & $U_0$        & $\lambda_0$ & -0.5  & 0   \\
+18  & $U_0$        & $\lambda_0$ & -0.4  & 0   \\
+19  & $U_0$        & $\lambda_0$ & -0.3  & 0   \\
+20  & $U_0$        & $\lambda_0$ & -0.2  & 0   \\
+21  & $U_0$        & $\lambda_0$ & -0.1  & 0   \\
+22  & $U_0$        & $\lambda_0$ & 0     & 0   \\
+23  & $U_0$        & $\lambda_0$ & 0.1   & 0   \\
+24  & $U_0$        & $\lambda_0$ & 0.2   & 0   \\
+25  & $U_0$        & $\lambda_0$ & 0.3   & 0   \\
+26  & $U_0$        & $\lambda_0$ & 0.4   & 0   \\
+27  & $U_0$        & $\lambda_0$ & 0.5   & 0   \\
+28  & $U_0$        & $\lambda_0$ & 0.6   & 0   \\
+29  & $U_0$        & $\lambda_0$ & 0.7   & 0   \\
+30  & $U_0$        & $\lambda_0$ & 0.8   & 0   \\
+31  & $U_0$        & $\lambda_0$ & 0.9   & 0   \\
+32  & $U_0$        & $\lambda_0$ & 1     & 0   \\
+33  & $U_0$        & $\lambda_0$ & 1.1   & 0   \\
+34  & $U_0$        & $\lambda_0$ & 1.2   & 0   \\
+35  & $U_0$        & $\lambda_0$ & 1.3   & 0   \\
+36  & $U_0$        & $\lambda_0$ & 1.4   & 0   \\
+37  & $U_0$        & $\lambda_0$ & 1.5   & 0   \\
+38  & $U_0$        & $\lambda_0$ & 1.6   & 0   \\
+39  & $U_0$        & $\lambda_0$ & 1.8   & 0   \\
+40  & $U_0$        & $\lambda_0$ & 2     & 0   \\
+41  & $U_0$        & $\lambda_0$ & 2.25  & 0   \\
+42  & $U_0$        & $\lambda_0$ & 2.5   & 0   \\
+43  & $U_0$        & $\lambda_0$ & 2.75  & 0   \\
+44  & $U_0$        & $\lambda_0$ & 3     & 0  
+\end{tabular}}
+\caption{Sample test matrices for acquiring a performance curve (left) and a
+cross-stream wake profile (right). $U_0$ is a constant a tow speed at which
+performance has reached Reynolds number independence, and $\lambda_0$ is the tip
+speed ratio at which turbine power coefficient is maximum.}
 \label{tab-test_section}
 \end{table}
+
 
 \chapter{Data file organization and content}
 
