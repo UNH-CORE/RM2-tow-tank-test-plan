@@ -10,6 +10,9 @@
 \usepackage{pdfpages}
 \usepackage{lineno}
 \usepackage{url}
+\usepackage{enumitem}
+\setlist[enumerate]{topsep=0pt,itemsep=-0.5ex,partopsep=1ex,parsep=1ex}
+\setlist[itemize]{topsep=0ex,itemsep=-0.5ex,partopsep=1ex,parsep=1ex}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 \linenumbers
@@ -165,7 +168,7 @@ publicly available for both validation of CACTUS and other numerical models.
 This report details the experimental test plan for acquiring, processing, and
 archiving this data, which includes development of a scaled physical model, and
 descriptions of the experimental setup and procedure to be performed in a towing
-tank at the University of New Hampshire.
+tank at the University of New Hampshire (UNH).
 
 
 \section{Study goals, objectives, and milestones}
@@ -188,7 +191,8 @@ study goals can be distilled into the following main objectives:
 	turbine. This objective involves the following tasks:
 
 		\begin{enumerate}
-			\item Design and build an appropriate turbine model.
+			\item Design and build a turbine model at a scale that is expected to reach
+			Reynolds number independence within the UNH tow tank's tow speed range.
 		
 			\item Acquire full device performance curves (power and drag coefficients) at
 			multiple turbine diameter Reynolds numbers $Re_D = U_\infty D/ \nu$, to
@@ -665,7 +669,7 @@ Metadata recorded for each run will include:
 	
 	\item Vectrino location
 	
-	\item Vectrino metadata
+	\item Vectrino metadata:
 	
 		\begin{itemize}
 		
@@ -677,7 +681,7 @@ Metadata recorded for each run will include:
 		
 		\end{itemize}
 		
-	\item NI device channel metadata
+	\item NI device channel metadata:
 	
 		\begin{itemize}
 		
