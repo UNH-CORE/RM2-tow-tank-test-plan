@@ -75,16 +75,28 @@ effort are provided in Neary et al. \cite{Neary2014}.
 
 Dimensional analysis provides scaling laws that are used to upscale model test
 data into performance and design information for a full-scale prototype turbine.
-For hydrokinetic turbines, hydrodynamic similitude is achieved when the chord
-Reynolds number $Re$, Froude number $Fr$, and the tip speed ratio
-$\lambda=\omega R/U_\infty$ of the model and the full-scale device are the same.
-It is rare to achieve perfect similitude for $Re$, but a threshold value should
-be exceeded, such that scale model results can be extrapolated. Note that in
-this study we are focusing on $Re$, not $Fr$ as the dominant scaling parameter
-since $Fr \ll 1$.
-
-\todo[inline]{Get ref for ``Froude number similitude in tow tank testing is
-important for upscaling wake flow data'' before adding above.}
+For hydrokinetic turbines, hydrodynamic similitude is achieved when the Reynolds
+number
+\begin{equation}
+Re_L = \frac{UL}{\nu},
+\label{eq-Re}
+\end{equation}
+where $U$ and $L$ are characteristic length scales, and $\nu$ is the fluid
+kinematic viscosity, Froude number
+\begin{equation}
+Fr = \frac{U}{\sqrt{gL}},
+\label{eq-Fr}
+\end{equation}
+where $g$ is the gravitational acceleration, and the tip speed ratio
+\begin{equation}
+\lambda=\frac{\omega R}{U_\infty},
+\end{equation}
+where $\omega$ and $R$ are the rotor angular velocity and radius,
+respectively---of the model and the full-scale device are matched. It is rare to
+achieve perfect similitude for $Re$, but a threshold value should be exceeded,
+such that scale model results can be extrapolated. Note that in this study we
+are focusing on $Re$, not $Fr$ as the dominant scaling parameter since $Fr \ll
+1$.
 
 As a cross-flow turbine, the RM2 blades will experience large variations in
 angles of attack as they rotate about their axis (``cross-flow turbine'' means
