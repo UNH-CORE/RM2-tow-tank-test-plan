@@ -430,24 +430,27 @@ position---are held constant. These runs can then be grouped into logical
 ``sections,'' in which typically a single independent variable is varied. For
 example, a test section will be dedicated to collecting turbine performance
 curves for a single tow speed, or turbine diameter Reynolds number, where only
-tip speed ratio is varied. An example is shown in Table~\ref{tab-test_section}.
-Note that the upper limit of tip speed ratio will be determined in ``shakedown''
-runs, and chosen to be just above the value at which turbine power coefficient
-reaches zero. Additional performance curve test sections are created/executed
-for different tow speeds. For wake characterization, sections will vary the
-cross-stream position of the velocity probe, providing a single profile.
-Multiple cross-stream profiles would be taken at varying vertical locations,
-each of which would represent a test section.
+tip speed ratio is varied. Note that the upper limit of tip speed ratio will be
+determined in ``shakedown'' runs, and chosen to be just above the value at which
+turbine power coefficient reaches zero. Additional performance curve test
+sections will be created/executed for different tow speeds. For wake
+characterization, sections will vary the cross-stream position of the velocity
+probe, providing a single profile transverse. Multiple cross-stream profiles
+will be taken at varying vertical locations, each of which would be executed as
+a test section. Examples of test matrices for performances curve and wake
+profile are shown in Table~\ref{tab-test_section}.
 
 Parameters for each test section will be created in the \texttt{Config/Test
 plan} folder inside the experiment working directory, saved in CSV format as
 input to the
 \textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
-experiment automation software. These CSVs also provide information about each
-run to be used in post-processing. Note that the software is designed to read
-turbine properties (from \texttt{Config/turbine\_properties.json}), e.g. radius
-and height, so inputs for turbine rotational speed (tip speed ratio) and
-Vectrino probe location are in nondimensional form.
+experiment automation software, which was developed specifically for
+vertical-axis turbine measurements in the UNH tow tank. These CSVs also provide
+information about each run to be used in post-processing. Note that the software
+is designed to read turbine properties (from
+\texttt{Config/turbine\_properties.json}), e.g. radius and height, so inputs for
+turbine rotational speed (tip speed ratio) and Vectrino probe location are in
+nondimensional form.
 
 
 \section{Determining tank settling time}
