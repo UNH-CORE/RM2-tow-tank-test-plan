@@ -529,7 +529,7 @@ computed.
 Data collected for each run will include a transient period, where the tow
 carriage accelerates, after which turbine torque and wake velocities settle to
 become stationary or periodic. It is this ``steady-state'' duration that we are
-interested in. The duration will be indentified for several runs at each tow
+interested in. The duration will be identified for several runs at each tow
 speed by manual inspection. The tail end will then be truncated such that the
 data to be processed includes an integer number of blade passages, to minimize
 bias from periodicity. The time interval will be recorded as part of the reduced
@@ -540,7 +540,18 @@ al. \cite{Gunawan2011}. Corrections will include, for example, eliminating
 and/or replacing spikes \cite{Goring2002}, Doppler noise \cite{Voulgaris1998},
 and filtering \cite{Garcia2005}.
 
-\subsection{Uncertainty analysis}
+A CSV table of derived data will be created for each section, with one row per
+run containing the mean and standard deviation for the run's measured tow speed,
+tip speed ratio, power coefficient, drag coefficient, $u$, $v$, and $w$
+components of wake velocity, along with $\overline{u'v'}$, $\overline{u'w'}$,
+and $\overline{v'w'}$ Reynolds stresses, turbulence kinetic energy $k$, and 95\%
+confidence expanded uncertainties for $\lambda$, $C_P$, and $C_D$ (see
+\ref{heading-uncertainty} for the uncertainty analysis procedure). These CSV
+files will be stored in the \texttt{Data/Processed} directory, which will be
+included in the experiment's version control repository, to track changes to
+derived data from, e.g., modifications to the processing code.
+
+\subsection{Uncertainty analysis}\label{heading-uncertainty}
 
 As mentioned previously, one of the primary uses for the data collected is
 comparison with results from numerical modeling, and this comparison requires an
