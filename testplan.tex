@@ -615,22 +615,16 @@ STEP format 3-D models and 2-D PDFs of the manufacturing drawings.
 
 \section{Experimental data}
 
-A full performance curve for the turbine will consist of 20--30 tows at varying
-tip speed ratio. Each of these tows will produce raw data for the turbine
-torque, drag force on the submerged equipment, turbine shaft angle, carriage
-speed, and Vectrino velocity measurements. Raw data files will be saved from the
-NI data acquisition devices at a sample sate of 2 kHz, from the motion
-controller at 1 kHz, and from the Vectrino at 200 Hz. All three devices will be
-triggered by the motion controller at the beginning of each run so that they
-begin sampling at the exact same time.
-
-Raw data will be stored in HDF5 format, run metadata in text-based JavaScript
+Each data collection run (one tow) will produce raw data for the turbine torque,
+drag force on the submerged equipment, turbine shaft angle, carriage position,
+and Vectrino velocity measurements, along with the relative times for the
+samples. Raw data will be stored in HDF5 format, additional Vectrino raw data in
+Nortek's binary format (\texttt{*.vno}), run metadata in text-based JavaScript
 Object Notation (JSON), processed data in comma separated value (CSV), and
 processing code in Python. These formats were chosen for their platform- and
 language-independence, which will allow broadest usage of the data by other
-researchers. A summary of data file types and names is presented in
+researchers. A summary of data file types, names, and contents is presented in
 Table~\ref{tab-data_description}.
-
 
 \subsection{Directory structure and naming conventions}
 
@@ -643,7 +637,7 @@ subfolders, while processed data from each section are stored in the
 
 \subsection{Metadata}
 
-Each run's \texttt{metadata.json} file will include:
+Each run's metadata file (\texttt{metadata.json}) will include:
 
 \begin{itemize}
 
@@ -697,21 +691,24 @@ processed data, along with any software written for the processing, analysis,
 and visualization of this data. It is also important that we provide the data
 and code such that they are maintainable, both by ourselves and by other users.
 
-Since the dataset is of moderate size, we want to allow users to first
-obtain the software and processed data, since these are of most interest for
-generating figures or comparing to numerical modeling results. However, if users
-want to reanalyze the raw data, the software will be written such that raw data
-files are downloaded as needed, rather than one bulk download.
+Since the dataset is of moderate size, we will split the data into two
+parts---one for the processed data, and one for the raw data. This will allow
+users to first obtain the software, processed data, and documentation---most
+relevant for generating figures or comparing to numerical modeling
+results---without having to download an excessively large archive. However, if
+users want to reanalyze the raw data, the processing code will be written such
+that raw data files are downloaded as needed, rather than one bulk download,
+though it will still be possible to download the entire raw dataset, if desired.
 
 Raw data files will be uploaded to figshare\footnote{\url{http://figshare.com}},
 which will then give the dataset a Digital Object Identifier (DOI) and therefore
-a persistent URL. Processed data and processing code will be hosted on
-GitHub\footnote{\url{https://github.com/UNH-CORE/RM2-tow-tank}} to help
-facilitate updates to the analysis by both the investigators and third parties.
-This processing code will be written such that raw data is downloaded
-automatically as needed. Tagged versions or ``releases'' of the Git repository
-will be uploaded to figshare such that they will have their own DOIs, and can be
-cited appropriately in publications.
+a persistent URL. Processed data, processing code, and documentation will be
+stored in a Git\footnote{\url{http://git-scm.com}} version control repository,
+hosted on GitHub\footnote{\url{https://github.com/UNH-CORE/RM2-tow-tank}} to
+help facilitate updates to the analysis by both the investigators and third
+parties. Tagged versions or ``releases'' of the Git repository will be uploaded
+to figshare such that they will have their own DOIs, and can be cited
+appropriately in publications.
 
 \section{Licensing} 
 
