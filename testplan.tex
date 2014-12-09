@@ -24,6 +24,7 @@
 \addtokomafont{subsection}{\rmfamily}
 \addtokomafont{subsubsection}{\rmfamily}
 \addtokomafont{disposition}{\rmfamily}
+\usepackage[scaled=0.9]{inconsolata}
 
 \linenumbers
 
@@ -448,7 +449,8 @@ plan} folder inside the experiment working directory, saved in CSV format as
 input to the
 \textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
 experiment automation software, which was developed specifically for
-vertical-axis turbine measurements in the UNH tow tank. These CSVs also provide
+vertical-axis turbine measurements in the UNH tow tank (see
+Figure~\ref{fig-turbinedaq} for a screenshot). These CSVs also provide
 information about each run to be used in post-processing. Note that the software
 is designed to read turbine properties (from
 \texttt{Config/turbine\_properties.json}), e.g. radius and height, so inputs for
@@ -655,7 +657,7 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 	
 	\item Prescribed tip speed ratio
 	
-	\item Run section and number, e.g., \texttt{"Perf-0.8 run 4"}
+	\item Run section and number, e.g., ``\texttt{Perf-0.8 run 4}''
 	
 	\item Time created
 	
@@ -791,7 +793,7 @@ Administration under contract DE-AC04-94AL85000.
 
 \begin{table}[!ht]
 \centering
-\scalebox{0.7}{
+\scalebox{0.6}{
 \begin{tabular}{c|c|c|c|c}
 Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
 \hline
@@ -817,7 +819,7 @@ Run & $U_\infty$ & $\lambda$ & $y/R$ & $z/H$ \\
 19 & 1.0 & 4.0 & 0.0 & 0.0 
 \end{tabular}}
 \hspace{0.75in}
-\scalebox{0.7}{
+\scalebox{0.6}{
 \begin{tabular}{c|c|c|c|c}
 Run & $U_\infty$ & $\lambda$ & $y/R$   & $z/H$ \\
 \hline
@@ -875,6 +877,17 @@ speed ratio at which turbine power coefficient is maximum.}
 \end{table}
 
 
+\chapter{Data acquisition software}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/TurbineDAQ}
+\caption{Screenshot from the \textit{TurbineDAQ} experiment automation software,
+developed for vertical-axis turbine measurements in the UNH tow tank.}
+\label{fig-turbinedaq}
+\end{figure}
+
+
 \chapter{Data file organization and content}
 
 \begin{figure}
@@ -895,7 +908,6 @@ RM2-tow-tank/
     Data/
         Processed/
             perf_0.8.csv
-            tare_drag.csv
         Raw/
             perf_0.8/
                 0/
@@ -910,14 +922,14 @@ RM2-tow-tank/
                     nidata.h5
                     vecdata.h5
                     vecdata.vno
-            tare_drag/
-                0/
-                    metadata.json
-                    acsdata.h5
-                    nidata.h5
+    Documents/
+        Test plan/
+        Final report/
+    Scripts/
+    README.md
 \end{verbatim}
-\caption{Sample directory structure for experiment configuration and data.}
-\label{fig-dir_structure}
+\caption{Sample directory structure for experiment configuration, data, and
+documentation.} \label{fig-dir_structure}
 \end{figure}
 
 \begin{table}[ht]
