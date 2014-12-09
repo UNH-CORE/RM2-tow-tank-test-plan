@@ -387,7 +387,9 @@ will be a scaled version of the SAFL RM2 shaft \cite{Hill2014}. The hub design
 is also similar to the SAFL model, which may aid in comparison of the results,
 though this is not a top priority. Geometric parameters are shown in
 Table~\ref{tab-turb_geom} and a drawing of the turbine design is shown in
-Figure~\ref{fig-turbine_drawing}. 
+Figure~\ref{fig-turbine_drawing}. The turbine model components---blades, struts,
+shaft, and center hub sections---will be fabricated from 6061-T6 aluminum, which
+will be hardcoat anodized per MIL-8625-A, type III, class 2 specifications.
 
 \begin{table}[ht]
 \centering
@@ -512,17 +514,17 @@ blades installed.}
 
 After Reynolds number independence has been found, we will perform a
 characterization of the near-wake at one turbine diameter downstream, acquiring
-a series of cross-stream profiles at varying height. The Vectrino will be in a
-fixed location (relative to the turbine center) for each run, necessitating
-multiple runs at varying cross-stream and vertical coordinates with the
-approximate ranges $y/R = \pm 2.8$ and $z/H = 0$--$0.75$, respectively---chosen
-based on previous experiments with similarly sized turbines, e.g.
-\cite{Bachant2013}, to visualize the complex three-dimensional flow field
-present in the near-wake. The probe will be mounted to a NACA 0020 strut,
-attached to an automated positioning system, shown in
-Figure~\ref{fig-yz_traverse}, which is driven by stepper motors with resolutions
-of approximately $3 \times 10^{-5}$ meters per step, and controlled by the tow
-tank's main motion controller.
+a series of cross-stream profiles at varying height, mapping out the upper half
+of the wake, measured from the turbine center. The Vectrino will be in a fixed
+location (relative to the turbine center) for each run, necessitating multiple
+runs at varying cross-stream and vertical coordinates with the approximate
+ranges $y/R = \pm 2.8$ and $z/H = 0$--$0.75$, respectively---chosen based on
+previous experiments with similarly sized turbines, e.g. \cite{Bachant2013}, to
+visualize the complex three-dimensional flow field present in the near-wake. The
+probe will be mounted to a NACA 0020 strut, attached to an automated positioning
+system, shown in Figure~\ref{fig-yz_traverse}, which is driven by stepper motors
+with resolutions of approximately $3 \times 10^{-5}$ meters per step, and
+controlled by the tow tank's main motion controller.
 
 \begin{figure}[ht]
 \centering
@@ -628,18 +630,34 @@ making the data suitable for model validation.
 
 \chapter{Research deliverables}
 
-\section{Final report}
+The research deliverables for this project include the following:
 
-After the measurement data is analyzed, a final technical report will be written
-that includes the project's goals and objectives, methods, results, and
-conclusions.
+\begin{itemize}
 
-\section{CAD data}
+    \item A 1:6 scale RM2 vertical-axis turbine rotor model, 3-D CAD models of
+    its geometry, and 2-D manufacturing drawings detailing how it was fabricated
+    and assembled.
+    
+    \item Raw turbine performance data for power coefficient curves acquired at
+    multiple Reynolds numbers. The data are described in detail in
+    Section~\ref{sec-exp_data} below.
+    
+    \item Raw turbine performance data showing the parasitic effects of
+    high-drag support struts.
+    
+    \item Three components of raw wake velocity data characterizing the upper
+    half of the wake a one turbine diameter downstream.
+    
+    \item Tabulated processed data from each run and the software used to
+    compute them.
+    
+    \item A final report detailing the goals of the experiment, how it was
+    conducted, descriptions of the results, and conclusions reached.
 
-Computer aided design (CAD) data for the turbine model will be provided as both
-STEP format 3-D models and 2-D PDFs of the manufacturing drawings.
+\end{itemize}
 
-\section{Experimental data}
+
+\section{Experimental data}\label{sec-exp_data}
 
 Each data collection run (one tow) will produce raw data for the turbine torque,
 drag force on the submerged equipment, turbine shaft angle, carriage position,
@@ -725,7 +743,9 @@ modeling results---without having to download an excessively large archive.
 However, if users want to reanalyze the raw data, the processing code will be
 written such that raw data files are downloaded as needed, rather than one bulk
 download, though it will still be possible to download the entire raw dataset,
-if desired.
+if desired. This strategy is convenient, for example, for a researcher looking
+to compute wake spectra at a single location, since he or she would only need to
+download $\sim 10$ MB of data, rather than the entire $\sim 10$ GB.
 
 Raw data files will be uploaded to figshare\footnote{\url{http://figshare.com}},
 which will then give the dataset a Digital Object Identifier (DOI) and therefore
