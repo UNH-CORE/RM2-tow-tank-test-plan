@@ -478,9 +478,30 @@ experiment configuration---one value for each tow speed.
 
 In order to establish that we have reached a Reynolds number independent regime
 for turbine performance, we will acquire multiple performance curves, starting
-at a tow speed of 0.4 m/s, incrementing by 0.2 m/s, until
-convergence is seen in the measured power coefficient. This will be determined
-by post-processing the data concurrently.
+at a tow speed of 0.2 m/s, incrementing by 0.2 m/s up to the maximum practical
+tow speed. We expect to see convergence in the measured power coefficient,
+similar to Figure~\ref{fig-cp_re_dep}, around a tow speed of 1 m/s, which
+corresponds to a turbine diameter Reynolds number $Re_D = 1.1 \times 10^6$ and
+an approximate blade chord Reynolds number $Re_c = 2.0 \times 10^5$ at $\lambda
+= 3$. This will be determined by post-processing the data concurrently. See
+Table~\ref{tab-re} for Reynolds numbers corresponding to specific tow speeds.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c}
+Tow speed (m/s) & $Re_D$ & $Re_c$ at $\lambda = 3$ \\ 
+\hline 
+0.2 & $2.2 \times 10^5$ & $4.0 \times 10^4$ \\ 
+0.4 & $4.3 \times 10^5$ & $8.0 \times 10^4$ \\ 
+0.6 & $6.5 \times 10^5$ & $1.2 \times 10^5$ \\ 
+0.8 & $8.6 \times 10^5$ & $1.6 \times 10^5$ \\ 
+1.0 & $1.1 \times 10^6$ & $2.0 \times 10^5$ \\ 
+1.2 & $1.3 \times 10^6$ & $2.4 \times 10^5$ \\ 
+1.4 & $1.5 \times 10^6$ & $2.8 \times 10^5$ \\
+\end{tabular} 
+\caption{Turbine diameter and approximate blade chord Reynolds numbers
+corresponding to tow speeds.} \label{tab-re}
+\end{table}
 
 
 \section{Measuring the effects of strut drag}
