@@ -80,7 +80,7 @@
 
 Sandia National Laboratory (SNL) developed the cross-flow turbine, Reference
 Model 2 (RM2), to estimate the levelized cost of energy (LCOE), and to provide
-open power performance data from scaled model testing that can be used to
+publicly available power performance data from scaled model testing that can be used to
 validate open-source design tools.  More details on the reference modeling
 effort are provided in Neary et al. \cite{Neary2014}.
 
@@ -107,7 +107,7 @@ respectively---of the model and the full-scale device are matched. It is rare to
 achieve perfect similitude for $Re$, but a threshold value should be exceeded,
 such that scale model results can be extrapolated. Note that in this study we
 are focusing on $Re$, not $Fr$ as the dominant scaling parameter since the
-Froude number (based on blade tip submergence) will remain below unity.
+Froude number (based on blade tip submergence) will remain small (significantly below one).
 
 As a cross-flow turbine, the RM2 blades will experience large variations in
 angles of attack as they rotate about their axis (``cross-flow turbine'' means
@@ -115,7 +115,7 @@ the axis of rotation is perpendicular to flow direction---can be vertical or
 horizontal). This range of angles of attack becomes larger as the tip speed
 ratio decreases \cite{Para2002}. The variation is typically sufficiently large
 that the blades operate under dynamic stall, which is a complex unsteady
-process, deviating significantly from static foil behavior. Furthermore, the
+process and deviates significantly from static foil behavior, during part of the rotation. Furthermore, the
 higher the solidity of a cross-flow turbine, the lower the optimal tip-speed
 ratio at which it operates. Marine Hydrokinetic (MHK) cross-flow turbines
 typically have higher solidity than cross-flow wind turbines (VAWT), and hence
@@ -165,13 +165,12 @@ Reynolds number, $Re_c \sim 10^4$, was below the threshold needed to properly
 simulate lift and stall characteristics. For the UNH experiment
 \cite{Bachant2013}, the chord Reynolds number was sufficiently high at $Re_c
 \approx 2.7 \times 10^5$, but the chord/radius ratio and solidity (13.4\%)
-created instability in the free-wake evolution, which caused significant
+created instability in the free-wake evolution in the model, which caused significant
 overestimation of power coefficient.
 
-The present task is therefore to acquire a new dataset for the lower solidity
-RM2 turbine, but at higher Reynolds numbers. It is also suspected that the strut
-drag model in CACTUS may be causing some discrepancy, so providing some hard
-data for comparison will help sort out that question. This dataset will be
+The present task is to acquire a new dataset for the lower solidity
+RM2 turbine, but at higher Reynolds numbers than those achieved in the experiments at SAFL. It is also suspected that the strut
+drag model in CACTUS could be the source of some discrepancy, so the strut drag will be deliberately modified in the physical model to provide data to help sort out that question. This dataset will be
 publicly available for both validation of CACTUS and other numerical models.
 This report details the experimental test plan for acquiring, processing, and
 archiving this data, which includes development of a scaled physical model, and
@@ -199,7 +198,7 @@ study goals can be distilled into the following main objectives:
 	\item Perform measurements with the RM2 1:6 scale model in the UNH-CORE tow tank turbine test bed to:
 
 	\begin{itemize}
-		\item Reach Reynolds number independence of turbine power coefficient. 
+		\item Document the dependence of the turbine power coefficient on Reynolds number, and where it becomes independednt of Reynolds number.
 		
 		\item Characterize the near-wake at maximum power coefficient at the Reynolds
 		number independent state.
@@ -724,7 +723,7 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 
 \section{Management and archiving}
 
-This experiment will produce $\sim 10$ GB of data. The two guiding principles
+This experiment likely produce on the order of 10 GB of data. The two guiding principles
 for the management of this data are openness and usefulness, i.e., we want
 potential users to know exactly how the data was created, and be able to reuse
 the data as conveniently as possible. We will make available all raw and
@@ -756,7 +755,7 @@ appropriately in publications.
 
 \section{Licensing} 
 
-All research products---documentation, data, code, CAD models, etc.---will be
+The research products described above---documentation, data, code, CAD models, etc.---will be
 freely available under a Creative Commons Attribution (CC-BY) license, which
 allows free access, further sharing, and adaptation so long as the original
 source is credited.
