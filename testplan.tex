@@ -271,7 +271,7 @@ motor, providing a redundant measurement. Turbine shaft angle will be measured
 using the servo drive's emulated encoder output, set to $10^5$ counts per
 turbine shaft revolution. Carriage speed, and therefore inflow velocity will be
 measured using a linear encoder with 10 $\mu$m resolution. All of these
-performance related quantities will be sampled as 2 kHz, while the tow tank's
+performance-related quantities will be sampled as 2 kHz, while the tow tank's
 motion controller will provide redundant measurements of the carriage speed and
 turbine angular velocity sampled at 1 kHz. Turbine wake measurements at 1
 turbine diameter downstream will be measured with a Nortek Vectrino+ acoustic
@@ -420,20 +420,20 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 Data collection runs will take place during individual tows, for which all
 independent variables---tow speed, tip speed ratio, velocity probe
 position---are held constant. These runs can then be grouped into logical
-``sections,'' in which typically a single independent variable is varied. For
-example, a test section will be dedicated to collecting turbine performance
+test ``segments,'' in which typically a single independent variable is varied. For
+example, a test segment will be dedicated to collecting turbine performance
 curves for a single tow speed, or turbine diameter Reynolds number, where only
 tip speed ratio is varied. Note that the upper limit of tip speed ratio will be
 determined in ``shakedown'' runs, and chosen to be just above the value at which
 turbine power coefficient reaches zero. Additional performance curve test
-sections will be created/executed for different tow speeds. For wake
-characterization, sections will vary the cross-stream position of the velocity
+segments will be created/executed for different tow speeds. For wake
+characterization, segments will vary the cross-stream position of the velocity
 probe, providing a single profile transverse. Multiple cross-stream profiles
 will be taken at varying vertical locations, each of which would be executed as
-a test section. Examples of test matrices for performances curve and wake
+a test segment. Examples of test matrices for performances curve and wake
 profile are shown in Table~\ref{tab-test_section}.
 
-Parameters for each test section will be created in the \texttt{Config/Test
+Parameters for each test segment will be created in the \texttt{Config/Test
 plan} folder inside the experiment working directory, saved in CSV format as
 input to the
 \textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
@@ -459,8 +459,8 @@ experiment configuration---one value for each tow speed.
 
 In order to establish that we have reached a Reynolds number independent regime
 for turbine performance, we will acquire multiple performance curves, starting
-at a relatively slow tow speed ($\sim 0.2$ m/s), incrementing up to the maximum
-practical tow speed. We expect to see convergence in the measured power
+at a relatively slow tow speed (on the order of 0.2 m/s), incrementing up to the maximum
+practical tow speed. For the scale of the RM2 model, we expect to see convergence in the measured power
 coefficient, similar to Figure~\ref{fig-cp_re_dep}, around a tow speed of 1 m/s,
 which corresponds to a turbine diameter Reynolds number $Re_D = 1.1 \times 10^6$
 and an approximate blade chord Reynolds number $Re_c = 2.0 \times 10^5$ at
@@ -491,7 +491,7 @@ corresponding to tow speeds.} \label{tab-re}
 In order to measure the effects of strut drag, we will acquire an additional
 performance curve at the Reynolds number independent tow speed $U_0$ for the
 device with cylindrical strut covers slid over the struts to increase their drag
-coefficients by several orders of magnitude. We will also measure the rotor
+by several orders of magnitude. We will also measure the rotor
 torque with the blades removed and strut covers installed, while rotating the
 turbine over the range of angular velocities seen in the performance curve,
 providing a comparison for the drag coefficient of the cylinders in a rotating
@@ -580,7 +580,7 @@ Combining both sources of error, along with their propagation into quantities
 derived from multiple measurements, will follow the procedures outlined in
 Coleman and Steele (2009) \cite{ColemanSteele}, described below.
 
-We will compute an expanded uncertainty with 95\% confidence for $\lambda$,
+An expanded uncertainty interval with 95\% confidence can be computed for $\lambda$,
 $C_P$, and $C_D$
 \begin{equation}
 U_{95} = t_{95} u_c,
@@ -622,7 +622,7 @@ same experimental setup, we expect expanded uncertainties for $\lambda$, $C_P$,
 and $C_D$ to be approximately 0.008, 0.01, and 0.02, respectively, at a tow
 speed $U_\infty = 1.0$ m/s. These values are well within the discrepancies
 between previous measurements and predictions by CACTUS \cite{Michelen2014},
-making the data suitable for model validation.
+making the data from the experiments described here suitable for model validation.
 
 \chapter{Research deliverables}
 
@@ -670,10 +670,10 @@ Table~\ref{tab-data_description}.
 
 A sample directory structure is shown in Figure~\ref{fig-dir_structure}. In the
 \texttt{Config/Test plan} folder are the CSV files containing the test parameter
-matrices for each test section. Section names are inferred from the CSV file
+matrices for each test segment. Segment names are inferred from the CSV file
 names. Raw data files are stored in the \texttt{Data/Raw/\{section\}/\{run\}}
-subfolders, while processed data from each section are stored in the
-\texttt{Data/Processed} subfolder---one CSV file per experiment section.
+subfolders, while processed data from each segment are stored in the
+\texttt{Data/Processed} subfolder---one CSV file per experiment segment.
 
 \subsection{Metadata}
 
@@ -685,7 +685,7 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 	
 	\item Prescribed tip speed ratio
 	
-	\item Run section and number, e.g., ``\texttt{Perf-0.8 run 4}''
+	\item Run segment and number, e.g., ``\texttt{Perf-0.8 run 4}''
 	
 	\item Time created
 	
@@ -723,7 +723,7 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 
 \section{Management and archiving}
 
-This experiment likely produce on the order of 10 GB of data. The two guiding principles
+This experiment will likely produce on the order of 10 GB of data. The two guiding principles
 for the management of this data are openness and usefulness, i.e., we want
 potential users to know exactly how the data was created, and be able to reuse
 the data as conveniently as possible. We will make available all raw and
