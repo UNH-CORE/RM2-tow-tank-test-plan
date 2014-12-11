@@ -420,20 +420,19 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 Data collection runs will take place during individual tows, for which all
 independent variables---tow speed, tip speed ratio, velocity probe
 position---are held constant. These runs can then be grouped into logical
-test ``segments,'' in which typically a single independent variable is varied. For
-example, a test segment will be dedicated to collecting turbine performance
+test matrix ``sections,'' in which typically a single independent variable is varied. For
+example, a test matrix section will be dedicated to collecting turbine performance
 curves for a single tow speed, or turbine diameter Reynolds number, where only
 tip speed ratio is varied. Note that the upper limit of tip speed ratio will be
 determined in ``shakedown'' runs, and chosen to be just above the value at which
 turbine power coefficient reaches zero. Additional performance curve test
-segments will be created/executed for different tow speeds. For wake
-characterization, segments will vary the cross-stream position of the velocity
-probe, providing a single profile transverse. Multiple cross-stream profiles
-will be taken at varying vertical locations, each of which would be executed as
-a test segment. Examples of test matrices for performances curve and wake
-profile are shown in Table~\ref{tab-test_section}.
+matrix sections will be created/executed for different tow speeds. For wake
+characterization, test matrix sections will vary the cross-stream position of the velocity
+probe, providing a single profile transverse, and multiple profiles
+will be taken at varying vertical locations. Examples of test matrices for a performance 
+curve and a wake profile are shown in Table~\ref{tab-test_section}.
 
-Parameters for each test segment will be created in the \texttt{Config/Test
+Parameters for each test matrix section will be created in the \texttt{Config/Test
 plan} folder inside the experiment working directory, saved in CSV format as
 input to the
 \textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
@@ -670,10 +669,10 @@ Table~\ref{tab-data_description}.
 
 A sample directory structure is shown in Figure~\ref{fig-dir_structure}. In the
 \texttt{Config/Test plan} folder are the CSV files containing the test parameter
-matrices for each test segment. Segment names are inferred from the CSV file
+matrices for each section of the test plan, whose names are inferred from the CSV file
 names. Raw data files are stored in the \texttt{Data/Raw/\{section\}/\{run\}}
-subfolders, while processed data from each segment are stored in the
-\texttt{Data/Processed} subfolder---one CSV file per experiment segment.
+subfolders, while processed data are stored in the
+\texttt{Data/Processed} subfolder---one CSV file per test matrix section.
 
 \subsection{Metadata}
 
@@ -685,7 +684,7 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 	
 	\item Prescribed tip speed ratio
 	
-	\item Run segment and number, e.g., ``\texttt{Perf-0.8 run 4}''
+	\item Test plan section and run number, e.g., ``\texttt{Perf-0.8 run 4}''
 	
 	\item Time created
 	
