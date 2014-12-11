@@ -195,10 +195,12 @@ study goals can be distilled into the following main objectives:
 \begin{itemize}
 	\item Design and fabricate a 1:6 scale model of the RM2 turbine.
 
-	\item Perform measurements with the RM2 1:6 scale model in the UNH-CORE tow tank turbine test bed to:
+	\item Perform measurements with the RM2 1:6 scale model in the UNH-CORE tow
+	tank turbine test bed to:
 
 	\begin{itemize}
-		\item Document the dependence of the turbine power coefficient on Reynolds number, and where it becomes independednt of Reynolds number.
+		\item Document the dependence of the turbine power coefficient on Reynolds
+		number, and where it becomes independent of Reynolds number.
 		
 		\item Characterize the near-wake at maximum power coefficient at the Reynolds
 		number independent state.
@@ -419,22 +421,23 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 
 Data collection runs will take place during individual tows, for which all
 independent variables---tow speed, tip speed ratio, velocity probe
-position---are held constant. These runs can then be grouped into logical
-test matrix ``sections,'' in which typically a single independent variable is varied. For
-example, a test matrix section will be dedicated to collecting turbine performance
-curves for a single tow speed, or turbine diameter Reynolds number, where only
-tip speed ratio is varied. Note that the upper limit of tip speed ratio will be
-determined in ``shakedown'' runs, and chosen to be just above the value at which
-turbine power coefficient reaches zero. Additional performance curve test
-matrix sections will be created/executed for different tow speeds. For wake
-characterization, test matrix sections will vary the cross-stream position of the velocity
-probe, providing a single profile transverse, and multiple profiles
-will be taken at varying vertical locations. Examples of test matrices for a performance 
-curve and a wake profile are shown in Table~\ref{tab-test_section}.
+position---are held constant. These runs can then be grouped into logical test
+matrix ``sections,'' in which typically a single independent variable is varied.
+For example, a test matrix section will be dedicated to collecting turbine
+performance curves for a single tow speed, or turbine diameter Reynolds number,
+where only tip speed ratio is varied. Note that the upper limit of tip speed
+ratio will be determined in ``shakedown'' runs, and chosen to be just above the
+value at which turbine power coefficient reaches zero. Additional performance
+curve test matrix sections will be created/executed for different tow speeds.
+For wake characterization, test matrix sections will vary the cross-stream
+position of the velocity probe, providing a single profile transverse, and
+multiple profiles will be taken at varying vertical locations. Examples of test
+matrices for a performance curve and a wake profile are shown in
+Table~\ref{tab-test_section}.
 
-Parameters for each test matrix section will be created in the \texttt{Config/Test
-plan} folder inside the experiment working directory, saved in CSV format as
-input to the
+Parameters for each test matrix section will be created in the
+\texttt{Config/Test plan} folder inside the experiment working directory, saved
+in comma separated value (CSV) format as input to the
 \textit{TurbineDAQ}\footnote{\url{https://github.com/petebachant/TurbineDAQ}}
 experiment automation software, which was developed specifically for
 vertical-axis turbine measurements in the UNH tow tank (see
@@ -458,14 +461,14 @@ experiment configuration---one value for each tow speed.
 
 In order to establish that we have reached a Reynolds number independent regime
 for turbine performance, we will acquire multiple performance curves, starting
-at a relatively slow tow speed (on the order of 0.2 m/s), incrementing up to the maximum
-practical tow speed. For the scale of the RM2 model, we expect to see convergence in the measured power
-coefficient, similar to Figure~\ref{fig-cp_re_dep}, around a tow speed of 1 m/s,
-which corresponds to a turbine diameter Reynolds number $Re_D = 1.1 \times 10^6$
-and an approximate blade chord Reynolds number $Re_c = 2.0 \times 10^5$ at
-$\lambda = 3$. This will be determined by post-processing the data concurrently.
-See Table~\ref{tab-re} for Reynolds numbers corresponding to specific tow
-speeds.
+at a relatively slow tow speed (on the order of 0.2 m/s), incrementing up to the
+maximum practical tow speed. For the scale of the RM2 model, we expect to see
+convergence in the measured power coefficient, similar to
+Figure~\ref{fig-cp_re_dep}, around a tow speed of 1 m/s, which corresponds to a
+turbine diameter Reynolds number $Re_D = 1.1 \times 10^6$ and an approximate
+blade chord Reynolds number $Re_c = 2.0 \times 10^5$ at $\lambda = 3$. This will
+be determined by post-processing the data concurrently. See Table~\ref{tab-re}
+for Reynolds numbers corresponding to specific tow speeds.
 
 \begin{table}[ht]
 \centering
@@ -579,8 +582,8 @@ Combining both sources of error, along with their propagation into quantities
 derived from multiple measurements, will follow the procedures outlined in
 Coleman and Steele (2009) \cite{ColemanSteele}, described below.
 
-An expanded uncertainty interval with 95\% confidence can be computed for $\lambda$,
-$C_P$, and $C_D$
+An expanded uncertainty interval with 95\% confidence can be computed for
+$\lambda$, $C_P$, and $C_D$
 \begin{equation}
 U_{95} = t_{95} u_c,
 \end{equation}
@@ -659,20 +662,21 @@ drag force on the submerged equipment, turbine shaft angle, carriage position,
 and Vectrino velocity measurements, along with the relative times for the
 samples. Raw data will be stored in HDF5 format, additional Vectrino raw data in
 Nortek's binary format (\texttt{*.vno}), run metadata in text-based JavaScript
-Object Notation (JSON), processed data in comma separated value (CSV), and
-processing code in Python. These formats were chosen for their platform- and
-language-independence, which will allow broadest usage of the data by other
-researchers. A summary of data file types, names, and contents is presented in
+Object Notation (JSON), processed data as CSV, and processing code in Python.
+These formats were chosen for their platform- and language-independence, which
+will allow broadest usage of the data by other researchers. A summary of data
+file types, names, and contents is presented in
 Table~\ref{tab-data_description}.
 
 \subsection{Directory structure and naming conventions}
 
 A sample directory structure is shown in Figure~\ref{fig-dir_structure}. In the
-\texttt{Config/Test plan} folder are the CSV files containing the test parameter
-matrices for each section of the test plan, whose names are inferred from the CSV file
-names. Raw data files are stored in the \texttt{Data/Raw/\{section\}/\{run\}}
-subfolders, while processed data are stored in the
-\texttt{Data/Processed} subfolder---one CSV file per test matrix section.
+\texttt{Config/Test plan} folder are the CSV files containing the tabulated test
+parameters for each test matrix section, whose names are inferred from the CSV
+file names. Raw data files are stored in the
+\texttt{Data/Raw/\{section\}/\{run\}} subfolders, while processed data are
+stored in the \texttt{Data/Processed} subfolder---one CSV file per test matrix
+section.
 
 \subsection{Metadata}
 
@@ -722,13 +726,14 @@ Each run's metadata file (\texttt{metadata.json}) will include:
 
 \section{Management and archiving}
 
-This experiment will likely produce on the order of 10 GB of data. The two guiding principles
-for the management of this data are openness and usefulness, i.e., we want
-potential users to know exactly how the data was created, and be able to reuse
-the data as conveniently as possible. We will make available all raw and
-processed data, along with any software written for the processing, analysis,
-and visualization of this data. It is also important that we provide the data
-and code such that they are maintainable, both by ourselves and by other users.
+This experiment will likely produce on the order of 10 GB of data. The two
+guiding principles for the management of this data are openness and usefulness,
+i.e., we want potential users to know exactly how the data was created, and be
+able to reuse the data as conveniently as possible. We will make available all
+raw and processed data, along with any software written for the processing,
+analysis, and visualization of this data. It is also important that we provide
+the data and code such that they are maintainable, both by ourselves and by
+other users.
 
 Since the dataset is of moderate size, we will split the data into two
 parts---one containing the processed data, and one the raw data. This will allow
@@ -754,10 +759,10 @@ appropriately in publications.
 
 \section{Licensing} 
 
-The research products described above---documentation, data, code, CAD models, etc.---will be
-freely available under a Creative Commons Attribution (CC-BY) license, which
-allows free access, further sharing, and adaptation so long as the original
-source is credited.
+The research products described above---documentation, data, code, CAD models,
+etc.---will be freely available under a Creative Commons Attribution (CC-BY)
+license, which allows free access, further sharing, and adaptation so long as
+the original source is credited.
 
 
 \chapter{Summary}
