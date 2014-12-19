@@ -48,10 +48,7 @@
     University of New Hampshire \\
     Durham, NH \\
     \vspace{0.1in}
-        B. Gunawan$^2$\\
-    V. Neary$^2$\\  
-    \vfill
-$^2$Water Power Technologies \\
+    $^2$Water Power Technologies \\
     Sandia National Laboratories \\
     Albuquerque, NM \\
     \vfill
@@ -81,20 +78,23 @@ $^2$Water Power Technologies \\
 \chapter{Introduction}
 
 Sandia National Laboratory (SNL) developed the cross-flow turbine, Reference
-Model 2 (RM2), to to provide
-an open-source point design for MHK research and development, including its use as a test object for  scaled model testing to generate power performance data that can be used to validate open-source design tools.  More details on the reference
-modeling effort are provided in Neary et al. \cite{Neary2014}.
+Model 2 (RM2), to to provide an open-source point design for MHK research and
+development, including its use as a test object for  scaled model testing to
+generate power performance data that can be used to validate open-source design
+tools.  More details on the reference modeling effort are provided in Neary et
+al. \cite{Neary2014}.
 
 Dimensional analysis provides scaling laws that are used to upscale model test
 data into performance and design information for a full-scale prototype turbine.
 For hydrokinetic turbines, hydrodynamic similitude is achieved when the Reynolds
-number, Froude number and tip-speed-ratio of the model and the full scale device match.  Where
+number, Froude number and tip-speed-ratio of the model and the full scale device
+match. The Reynolds number is defined as
 \begin{equation}
 Re_L = \frac{UL}{\nu},
 \label{eq-Re}
 \end{equation}
 where $U$ and $L$ are characteristic length scales, and $\nu$ is the fluid
-kinematic viscosity, Froude number
+kinematic viscosity, the Froude number
 \begin{equation}
 Fr = \frac{U}{\sqrt{gL}},
 \label{eq-Fr}
@@ -103,43 +103,41 @@ where $g$ is the gravitational acceleration, and the tip speed ratio
 \begin{equation}
 \lambda=\frac{\omega R}{U_\infty},
 \end{equation}
-where $\omega$ and $R$ are the rotor angular velocity and radius,
-respectively. For hydrokinetic turbine testing, $Re$, not $Fr$, isthe dominant scaling parameter.  However, theFroude number (based on blade tip submergence) should remain small (significantly
-below one)It is rare to
-achieve perfect similitude for $Re$, but a threshold value should be exceeded,
-such that scale model results can be extrapolated. Note that in this study we
-are focusing on
-
-.
+where $\omega$ and $R$ are the rotor angular velocity and radius.
+For hydrokinetic turbine testing, $Re$, not $Fr$, is the dominant scaling
+parameter. However, the Froude number (based on blade tip submergence) should
+remain small (significantly below one). It is rare to achieve perfect similitude
+for $Re$, but a threshold value should be exceeded, such that scale model
+results can be extrapolated. Note that in this study we are focusing on.
 
 As a cross-flow turbine, the RM2 blades will experience large variations in
 angles of attack as they rotate about their axis (``cross-flow turbine'' means
 the axis of rotation is perpendicular to flow direction---either vertically or
-horizontally). Thesevariation become larger as the tip speed
-ratio decreases \cite{Para2002}. Typically, this variation is sufficiently large
-that the blades operate under dynamic stall, which is a complex unsteady process
-and deviates significantly from static foil behavior, during part of the
-rotation. Furthermore, the higher the solidity of a cross-flow turbine, the
-lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
-(MHK) cross-flow turbines typically have higher solidity than cross-flow wind
-turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
-operate in a higher density fluid, unsteady dynamic effects related to the
-blades' pitching motion and flow curvature also become more important when
-compared to wind turbines.
+horizontally). These variations become larger as the tip speed ratio decreases
+\cite{Para2002}. Typically, this variation is sufficiently large that the blades
+operate under dynamic stall, which is a complex unsteady process and deviates
+significantly from static foil behavior, during part of the rotation.
+Furthermore, the higher the solidity of a cross-flow turbine, the lower the
+optimal tip-speed ratio at which it operates. Marine Hydrokinetic (MHK)
+cross-flow turbines typically have higher solidity than cross-flow wind turbines
+(VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines operate
+in a higher density fluid, unsteady dynamic effects related to the blades'
+pitching motion and flow curvature also become more important when compared to
+wind turbines.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
 Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
-expressed in terms of tip speed ratio, which is a function of solidity). If
-numerical models are validated with physical model data that was obtained at
-insufficiently high Reynolds numbers, it cannot be determined whether problems
-with model predictions are caused by Reynolds number effects, issues related to
-higher solidity, or both. It is uncertain whether numerical models validated
-with physical model data obtained at low Reynolds number should be considered
-validated at all, since the scale at which the model will be applied is orders
-of magnitude larger. One way to overcome this uncertainty is to show that the
-scaled physical model test has become Reynolds number independent, and therefore
-validation efforts should be relevant at full-scale. 
+expressed in terms of tip speed ratio, the optimal value for which is a function
+of solidity). If numerical models are validated with physical model data that
+was obtained at insufficiently high Reynolds numbers, it cannot be determined
+whether problems with model predictions are caused by Reynolds number effects,
+issues related to higher solidity, or both. It is uncertain whether numerical
+models validated with physical model data obtained at low Reynolds number should
+be considered validated at all, since the scale at which the model will be
+applied is orders of magnitude larger. One way to overcome this uncertainty is
+to show that the scaled physical model test has become Reynolds number
+independent, and therefore validation efforts should be relevant at full-scale.
 
 For example, the effect of Reynolds number on average power output was shown to
 be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
@@ -188,13 +186,16 @@ tank at the University of New Hampshire (UNH).
 
 The overarching goal of this project is to collect a Reynolds number independent
 performance dataset for a 1:6 scale RM2 turbine, which can be used to
-investigate the accuracy of CACTUS and other numerical models. This project will provide insight on the physics of hydrokinetic
-cross-flow turbines, including the importance of blade strut drag on turbine
-power output, which will inform investigations on the present limitations of the CACTUS model and potential modifications to improve its accuracy.  The strut drag investigation will also give turbine designers some
-perspective on the need to mitigate parasitic strut drag effects to improve rotor efficiency. The
-experimental dataset will be shared publicly and can be used for validating
-other numerical models/codes used by developers and DOE partners. The study
-goals can be distilled into the following main objectives:
+investigate the accuracy of CACTUS and other numerical models. This project will
+provide insight on the physics of hydrokinetic cross-flow turbines, including
+the importance of blade strut drag on turbine power output, which will inform
+investigations on the present limitations of the CACTUS model and potential
+modifications to improve its accuracy.  The strut drag investigation will also
+give turbine designers some perspective on the need to mitigate parasitic strut
+drag effects to improve rotor efficiency. The experimental dataset will be
+shared publicly and can be used for validating other numerical models/codes used
+by developers and DOE partners. The study goals can be distilled into the
+following main objectives:
 
 \begin{itemize}
 	\item Design and fabricate a 1:6 scale model of the RM2 turbine.
@@ -203,16 +204,16 @@ goals can be distilled into the following main objectives:
 	tank turbine test bed to:
 
 	\begin{itemize}
+
 		\item Document the dependence of the turbine power coefficient on Reynolds
 		number, and the conditions under which it becomes independent of Reynolds number.
 		
 		\item Observe the influence of strut drag on turbine performance.
-	\end{itemize}
-\item Characterize the near-wake at maximum power coefficient at the Reynolds
+		
+		\item Characterize the near-wake at maximum power coefficient at the Reynolds
 		number independent state.
-		
-		
 
+	\end{itemize}
 
 	\item Write a technical report to document the study objectives, methods,
 	results, and conclusions.
