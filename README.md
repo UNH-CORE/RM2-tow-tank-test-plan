@@ -10,7 +10,3 @@ The easiest way to add comments is to use a todo item:
 ```latex
 \todo[inline]{This is my comment. -- Pete}
 ```
-
-## Using Git
-
-See [here](https://github.com/UNH-CORE/RM2-tow-tank/wiki).
