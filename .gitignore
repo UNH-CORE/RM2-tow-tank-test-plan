@@ -1,1 +1,13 @@
-Archive/
+Archive
+Figures/SolidWorks
+Misc
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.gz
+*.tdo
+*.toc
+*.swp
