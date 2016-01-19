@@ -1,4 +1,4 @@
-# RM2 Experimental test plan document
+# RM2 experimental test plan document
 
 This repository contains the LaTeX source files for the  [RM2 tow tank
 experiment](https://github.com/UNH-CORE/RM2-tow-tank) test plan. The compiled
